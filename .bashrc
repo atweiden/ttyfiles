@@ -149,6 +149,7 @@ export PATH
 _has_ag=$(command -v ag)
 _has_colordiff=$(command -v colordiff)
 _has_icdiff=$(command -v icdiff)
+_has_makepkg=$(command -v makepkg)
 _has_mosh=$(command -v mosh)
 _has_nvim=$(command -v nvim)
 _has_perl6=$(command -v perl6)
@@ -243,6 +244,11 @@ alias locate='locate --ignore-case'
 # --- --- end perl6 }}}
 
 # --- end languages }}}
+# --- pacman {{{
+
+[[ -n "$_has_makepkg" ]] && alias mksrcinfo='makepkg --printsrcinfo > .SRCINFO'
+
+# --- end pacman }}}
 # --- processes {{{
 
 alias ps='ps --forest'
