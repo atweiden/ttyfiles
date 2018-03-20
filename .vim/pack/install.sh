@@ -71,6 +71,10 @@ package() {
  package 'rhysd/clever-f.vim' &
  package 'christoomey/vim-tmux-navigator' &
  wait) &
+(set_dir 'search-replace' 'start'
+ package 'junegunn/fzf' &
+ package 'junegunn/fzf.vim' &
+ wait) &
 (set_dir 'syntax' 'start'
  package 'junegunn/vim-journal' &
  package 'atweiden/vim-finn' &

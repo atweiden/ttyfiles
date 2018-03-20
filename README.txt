@@ -3,7 +3,7 @@
 ttyfiles
 ========
 
-vim and tmux config for arch tty
+vim, tmux and fzf config for arch tty
 
 - based on pacfiles [1]
 

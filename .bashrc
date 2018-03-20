@@ -427,6 +427,57 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 
 # end beam }}}
 # ==============================================================================
+# fzf {{{
+
+# use ag/pt/ack as the default source for fzf
+if [[ -n "$_has_ag" ]]; then
+  export FZF_DEFAULT_COMMAND='ag --hidden --smart-case --nocolor --skip-vcs-ignores --path-to-ignore=$HOME/.agignore -g ""'
+elif [[ -n "$_has_pt" ]]; then
+  export FZF_DEFAULT_COMMAND='pt --hidden --nocolor -e -g=""'
+elif [[ -n "$_has_ack" ]]; then
+  export FZF_DEFAULT_COMMAND='ack --nocolor --nopager -g ""'
+fi
+
+# use ag/pt/ack for ctrl-t completion
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+# use ag/pt/ack for ** completion
+_fzf_compgen_path() {
+  if [[ -n "$_has_ag" ]]; then
+    ag \
+      --hidden \
+      --smart-case \
+      --nocolor \
+      --skip-vcs-ignores \
+      --path-to-ignore="$HOME/.agignore" \
+      -g "" \
+      "$1"
+  elif [[ -n "$_has_pt" ]]; then
+    pt --hidden --nocolor -e -g="" "$1"
+  elif [[ -n "$_has_ack" ]]; then
+    ack --nocolor --nopager -g "" "$1"
+  fi
+}
+
+# use multi-select and seoul256 colors
+export FZF_DEFAULT_OPTS='
+  --multi
+  --color fg:242,bg:233,hl:65,fg+:15,bg+:234,hl+:108
+  --color info:108,prompt:109,spinner:108,pointer:168,marker:168
+'
+
+# improved preview
+[[ -n "$_has_tree" ]] \
+  && export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -$LINES'" \
+  && export FZF_CTRL_T_OPTS="--preview '(cat {} || tree -C {}) 2> /dev/null | head -200'"
+export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden --bind ?:toggle-preview"
+
+# create fzf key bindings
+[[ -e "/etc/profile.d/fzf.bash" ]] && source /etc/profile.d/fzf.bash
+[[ -e "/etc/profile.d/fzf-extras.bash" ]] && source /etc/profile.d/fzf-extras.bash
+
+# end fzf }}}
+# ==============================================================================
 # cryfs {{{
 
 export CRYFS_NO_UPDATE_CHECK=true
