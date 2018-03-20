@@ -55,11 +55,22 @@ package() {
 (set_dir 'colors' 'opt'
  package 'atweiden/vim-colors-miro8' &
  wait) &
+(set_dir 'color-utils' 'start'
+ package 'ntpeters/vim-better-whitespace' &
+ package 'mhinz/vim-hugefile' &
+ wait) &
 (set_dir 'command-runners' 'opt'
  package 'tpope/vim-tbone' &
  wait) &
+(set_dir 'comments' 'opt'
+ package 'tpope/vim-commentary' &
+ wait) &
 (set_dir 'crypto' 'start'
  package 'jamessan/vim-gnupg' &
+ wait) &
+(set_dir 'folds' 'start'
+ package 'Konfekt/FastFold' &
+ package 'Harenome/vim-neatfoldtext' &
  wait) &
 (set_dir 'keyboard' 'opt'
  package 'kana/vim-arpeggio' &
@@ -71,13 +82,28 @@ package() {
  package 'rhysd/clever-f.vim' &
  package 'christoomey/vim-tmux-navigator' &
  wait) &
-(set_dir 'search-replace' 'start'
+(set_dir 'repeat' 'start'
+ package 'tpope/vim-repeat' &
+ wait) &
+(set_dir 'search-replace' 'opt'
  package 'junegunn/fzf' &
  package 'junegunn/fzf.vim' &
  wait) &
+(set_dir 'surround' 'opt'
+ package 'tpope/vim-surround' &
+ wait) &
 (set_dir 'syntax' 'start'
+ package 'elixir-editors/vim-elixir' &
  package 'junegunn/vim-journal' &
  package 'atweiden/vim-finn' &
+ package 'vim-perl/vim-perl' &
+ package 'vim-perl/vim-perl6' &
+ package 'cespare/vim-toml' &
+ wait) &
+(set_dir 'textobj' 'start'
+ package 'wellle/targets.vim' &
+ package 'kana/vim-textobj-entire' &
+ package 'kana/vim-textobj-user' &
  wait) &
 wait
 
