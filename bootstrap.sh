@@ -136,4 +136,10 @@ sed -i "s#yourname#$name#"         "$HOME/.gitconfig"
 sed -i "s#youremail#$email#"       "$HOME/.gitconfig"
 sed -i "s#yourgithubacct#$github#" "$HOME/.gitconfig"
 
+
+# -----------------------------------------------------------------------------
+# permissions
+
+chmod 700 "$HOME/.gnupg" "$HOME/.ssh"
+
 # vim: set filetype=sh foldmethod=marker foldlevel=0:
