@@ -61,7 +61,7 @@ package() {
 (set_dir 'command-runners' 'opt'
  package 'tpope/vim-tbone' &
  wait) &
-(set_dir 'comments' 'opt'
+(set_dir 'comments' 'start'
  package 'tpope/vim-commentary' &
  wait) &
 (set_dir 'crypto' 'start'
@@ -88,7 +88,7 @@ package() {
  package 'junegunn/fzf' &
  package 'junegunn/fzf.vim' &
  wait) &
-(set_dir 'surround' 'opt'
+(set_dir 'surround' 'start'
  package 'tpope/vim-surround' &
  wait) &
 (set_dir 'syntax' 'start'
