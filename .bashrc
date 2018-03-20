@@ -146,13 +146,17 @@ export PATH
 # ==============================================================================
 # presence {{{
 
+_has_ack=$(command -v ack)
 _has_ag=$(command -v ag)
 _has_colordiff=$(command -v colordiff)
+_has_erl=$(command -v erl)
 _has_icdiff=$(command -v icdiff)
+_has_iex=$(command -v iex)
 _has_makepkg=$(command -v makepkg)
 _has_mosh=$(command -v mosh)
 _has_nvim=$(command -v nvim)
 _has_perl6=$(command -v perl6)
+_has_pt=$(command -v pt)
 _has_rclone=$(command -v rclone)
 _has_rlwrap=$(command -v rlwrap)
 _has_subgit=$(command -v subgit)
@@ -238,6 +242,12 @@ alias locate='locate --ignore-case'
 # --- end grepping }}}
 # --- languages {{{
 
+# --- --- beam {{{
+
+[[ -n "$_has_iex" && -n "$_has_rlwrap" ]] && alias iex='rlwrap --always-readline --ansi-colour-aware iex'
+[[ -n "$_has_erl" && -n "$_has_rlwrap" ]] && alias erl='rlwrap --always-readline --ansi-colour-aware erl'
+
+# --- --- end beam }}}
 # --- --- perl6 {{{
 
 [[ -n "$_has_perl6" ]] && alias p6='perl6'
@@ -409,6 +419,13 @@ if [[ -x "$HOME/.bin/archinfo" ]]; then
 fi
 
 # end archinfo }}}
+# ==============================================================================
+# beam {{{
+
+# enable repl history
+export ERL_AFLAGS="-kernel shell_history enabled"
+
+# end beam }}}
 # ==============================================================================
 # cryfs {{{
 

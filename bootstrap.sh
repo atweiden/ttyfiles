@@ -142,6 +142,8 @@ sed -i "s#youremail#$email#"       "$HOME/.config/pacman/makepkg.conf"
 sed -i "s#yourname#$name#"         "$HOME/.gitconfig"
 sed -i "s#youremail#$email#"       "$HOME/.gitconfig"
 sed -i "s#yourgithubacct#$github#" "$HOME/.gitconfig"
+sed -i "s#yourname#$name#"         "$HOME/.hgrc"
+sed -i "s#youremail#$email#"       "$HOME/.hgrc"
 
 
 # -----------------------------------------------------------------------------
