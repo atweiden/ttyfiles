@@ -84,7 +84,7 @@ package() {
 (set_dir 'repeat' 'start'
  package 'tpope/vim-repeat' &
  wait) &
-(set_dir 'search-replace' 'opt'
+(set_dir 'search-replace' 'start'
  package 'junegunn/fzf' &
  package 'junegunn/fzf.vim' &
  wait) &
