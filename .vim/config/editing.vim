@@ -74,7 +74,7 @@ set linebreak
 set whichwrap+=<,>,[,]
 
 " indicate wrapped characters
-set showbreak=·
+set showbreak=↳
 
 " copy indent from current line when starting a new line
 set autoindent
