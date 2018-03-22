@@ -393,6 +393,8 @@ alias :e='"$EDITOR"'
 [[ -n "$_has_vim" ]] && alias vime='vim -X -u $HOME/.vimencrypt -x'
 [[ -n "$_has_vim" ]] && alias viml='vim -X -u $HOME/.vimrc.lite'
 [[ -n "$_has_vim" ]] && alias vimmin='vim -X -u NONE -U NONE --cmd "set nocompatible | syntax on | filetype plugin indent on"'
+[[ -n "$_has_vim" ]] && alias rvim='rvim -X'
+[[ -n "$_has_vim" ]] && alias rview='rview -X'
 [[ -n "$_has_nvim" ]] && alias nv='nvim'
 [[ -n "$_has_nvim" ]] && alias nview='nvim -R'
 
