@@ -104,6 +104,9 @@ package() {
  package 'kana/vim-textobj-entire' &
  package 'kana/vim-textobj-user' &
  wait) &
+(set_dir 'vcs' 'start'
+ package 'rhysd/committia.vim' &
+ wait) &
 wait
 
 # vim: set filetype=sh foldmethod=marker foldlevel=0:
