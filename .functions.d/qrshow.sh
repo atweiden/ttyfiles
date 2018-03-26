@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # -----------------------------------------------------------------------------
-# mkaurpkg: create new aur pkg with git clone
+# qrshow: create and display QR code with qrencode
+# https://news.ycombinator.com/item?id=5332843
 # -----------------------------------------------------------------------------
 
-mkaurpkg() { git clone "git+ssh://aur@aur.archlinux.org/${1}.git"; }
+qrshow() { echo "$(qrencode -t ASCII -s 10 "$1" -o -)"; }
