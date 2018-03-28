@@ -150,6 +150,7 @@ _has_ack=$(command -v ack)
 _has_ag=$(command -v ag)
 _has_colordiff=$(command -v colordiff)
 _has_erl=$(command -v erl)
+_has_gdb=$(command -v gdb)
 _has_icdiff=$(command -v icdiff)
 _has_iex=$(command -v iex)
 _has_makepkg=$(command -v makepkg)
@@ -160,6 +161,7 @@ _has_pt=$(command -v pt)
 _has_rclone=$(command -v rclone)
 _has_rg=$(command -v rg)
 _has_rlwrap=$(command -v rlwrap)
+_has_sqlite3=$(command -v sqlite3)
 _has_subgit=$(command -v subgit)
 _has_subhg=$(command -v subhg)
 _has_systemctl=$(command -v systemctl)
@@ -185,6 +187,11 @@ PS1="\[\e[01;31m\]┌─[\[\e[01;35m\u\e[01;31m\]]──[\[\e[00;37m\]${HOSTNAME
 # ==============================================================================
 # aliases {{{
 
+# --- dbs {{{
+
+[[ -n "$_has_sqlite3" ]] && alias sql='sqlite3 -interactive :memory:'
+
+# --- end dbs }}}
 # --- diff {{{
 
 if [[ -n "$_has_icdiff" ]]; then
@@ -228,6 +235,11 @@ alias gzip='gzip -9'
 alias bzip2='bzip2 -9'
 
 # --- end file compression }}}
+# --- gdb {{{
+
+[[ -n "$_has_gdb" ]] && alias gdb='gdb -q'
+
+# --- end gdb }}}
 # --- grepping {{{
 
 alias grep='grep --ignore-case --color=auto'
@@ -296,6 +308,11 @@ alias rm='rm -i'
 [[ -n "$_has_systemctl" ]] && alias userctl='systemctl --user'
 
 # --- end systemctl }}}
+# --- text {{{
+
+alias hr='printf "$(printf "\e["$(shuf -i 91-97 -n 1)";1m%%%ds\e[0m\n" "$(tput cols)")" | tr " " ='
+
+# --- end text }}}
 # --- timestamp {{{
 
 alias dt='date +%FT%T%:::z'
