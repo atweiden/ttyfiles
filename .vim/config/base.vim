@@ -51,11 +51,8 @@ vnoremap <C-Q> <ESC>:qall<CR>
 " hide intro screen, use all abbreviations, omit redundant messages
 set shortmess=aIoO
 
-" turn on mouse in all modes
-if has('mouse')
-  set mouse=a
-  set mousemodel=popup_setpos
-endif
+" turn off mouse
+set mouse=
 
 " use utf-8 without BOM
 set encoding=utf-8
@@ -126,6 +123,5 @@ set lazyredraw
 
 " indicates fast terminal connection
 set ttyfast
-if !has('nvim') | set ttymouse=xterm2 | endif
 
 " vim: set filetype=vim foldmethod=marker foldlevel=0 nowrap:
