@@ -52,11 +52,11 @@ package() {
   fi
 }
 
-(set_dir 'colors' 'opt'
- package 'atweiden/vim-colors-miro8' &
- wait) &
 (set_dir 'color-utils' 'start'
  package 'mhinz/vim-hugefile' &
+ wait) &
+(set_dir 'colors' 'opt'
+ package 'atweiden/vim-colors-miro8' &
  wait) &
 (set_dir 'command-runners' 'opt'
  package 'tpope/vim-tbone' &
@@ -106,6 +106,9 @@ package() {
  wait) &
 (set_dir 'vcs' 'start'
  package 'rhysd/committia.vim' &
+ wait) &
+(set_dir 'windows' 'start'
+ package 'talek/obvious-resize' &
  wait) &
 wait
 
