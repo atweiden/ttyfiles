@@ -5,14 +5,17 @@
 # -----------------------------------------------------------------------------
 
 _usage_function() {
-read -r -d '' _usage_string <<'EOF'
+read -r -d '' _usage_string <<EOF
 Usage:
   ./bootstrap.sh [-h|--help]
+  ./bootstrap.sh [-u|--username <username>]
   ./bootstrap.sh [-n|--name <name>] [-e|--email <email>] [-g|--github <github>]
 
 Options:
   -h, --help
     print this help message
+  -u, --username <username>
+    set user name (defaults to "$USER")
   -n, --name <name>
     set full name (defaults to "Andy Weidenbaum")
   -e, --email <email>
@@ -29,9 +32,14 @@ while [[ $# -gt 0 ]]; do
       _usage_function
       exit 0
       ;;
+    -u|--username)
+      _username="$2"
+      # shift past argument and value
+      shift
+      shift
+      ;;
     -n|--name)
       _name="$2"
-      # shift past argument and value
       shift
       shift
       ;;
@@ -58,6 +66,7 @@ done
 # settings
 # -----------------------------------------------------------------------------
 
+username="${_username:-$USER}"         # User    (yay)
 name="${_name:-Andy Weidenbaum}"       # Name    (GitHub/AUR)
 email="${_email:-archbaum@gmail.com}"  # Email   (GitHub/AUR)
 github="${_github:-atweiden}"          # Account (GitHub)
@@ -136,6 +145,13 @@ mkdir -p ~/.config
 
 sed -i "s#yourname#$name#"         "$HOME/.config/pacman/makepkg.conf"
 sed -i "s#youremail#$email#"       "$HOME/.config/pacman/makepkg.conf"
+
+
+# -----------------------------------------------------------------------------
+# yay
+# -----------------------------------------------------------------------------
+
+sed -i "s#yourusername#$username#" "$HOME/.config/yay/config.json"
 
 
 # -----------------------------------------------------------------------------
