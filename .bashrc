@@ -169,6 +169,7 @@ _has_subhg=$(command -v subhg)
 _has_systemctl=$(command -v systemctl)
 _has_tree=$(command -v tree)
 _has_vim=$(command -v vim)
+_has_wget=$(command -v wget)
 
 # end presence }}}
 # ==============================================================================
@@ -419,6 +420,11 @@ alias :e='"$EDITOR"'
 [[ -n "$_has_nvim" ]] && alias nview='nvim -R'
 
 # --- end vim }}}
+# --- wget {{{
+
+[[ -n "$_has_wget" ]] && alias wget='wget --hsts-file=$HOME/.config/wget/wget-hsts'
+
+# --- end wget }}}
 
 # end aliases }}}
 # ==============================================================================
