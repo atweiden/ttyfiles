@@ -83,7 +83,8 @@ export XDG_DATA_HOME="$HOME/.local/share"
 # --- display {{{
 
 # miromiro dircolors by jwr
-[[ -f "$HOME/.dir_colors" ]] && eval $(dircolors -b "$HOME/.dir_colors")
+[[ -f "$HOME/.config/dircolors" ]] \
+  && eval $(dircolors -b "$HOME/.config/dircolors")
 
 # miro8 console colors by jwr
 echo -en "\e]P0000000" #black
