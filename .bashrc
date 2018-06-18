@@ -420,7 +420,7 @@ alias dt-zurich='_t=$(TZ=Europe/Zurich dt)            ; echo "[$_t] Zürich"'
 # --- vim {{{
 
 alias :e='"$EDITOR"'
-# if not in X, tell vim not to attempt connection w/ X server
+# tell vim not to attempt connection with X server
 [[ -n "$_has_vim" ]] && alias vim='vim -X'
 [[ -n "$_has_vim" ]] && alias view='vim -R'
 [[ -n "$_has_vim" ]] && alias vime='vim -u $HOME/.vim/vimrc.encrypt -x'
