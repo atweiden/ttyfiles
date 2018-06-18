@@ -413,8 +413,8 @@ alias dt-zurich='_t=$(TZ=Europe/Zurich dt)            ; echo "[$_t] Zürich"'
 # --- end timestamp }}}
 # --- tmux {{{
 
-[[ -n $TMUX ]] && alias clear='clear; tmux clear-history'
-[[ -n $TMUX ]] && alias reset='reset; tmux clear-history'
+[[ -n "$TMUX" ]] && alias clear='clear; tmux clear-history'
+[[ -n "$TMUX" ]] && alias reset='reset; tmux clear-history'
 
 # --- end tmux }}}
 # --- vim {{{
@@ -422,10 +422,10 @@ alias dt-zurich='_t=$(TZ=Europe/Zurich dt)            ; echo "[$_t] Zürich"'
 alias :e='"$EDITOR"'
 # if not in X, tell vim not to attempt connection w/ X server
 [[ -n "$_has_vim" ]] && alias vim='vim -X'
-[[ -n "$_has_vim" ]] && alias view='vim -X -R'
-[[ -n "$_has_vim" ]] && alias vime='vim -X -u $HOME/.vim/vimrc.encrypt -x'
-[[ -n "$_has_vim" ]] && alias viml='vim -X -u $HOME/.vim/vimrc.lite'
-[[ -n "$_has_vim" ]] && alias vimmin='vim -X -u NONE -U NONE --cmd "set nocompatible | syntax on | filetype plugin indent on"'
+[[ -n "$_has_vim" ]] && alias view='vim -R'
+[[ -n "$_has_vim" ]] && alias vime='vim -u $HOME/.vim/vimrc.encrypt -x'
+[[ -n "$_has_vim" ]] && alias viml='vim -u $HOME/.vim/vimrc.lite'
+[[ -n "$_has_vim" ]] && alias vimmin='vim -u NONE -U NONE --cmd "set nocompatible | syntax on | filetype plugin indent on"'
 [[ -n "$_has_vim" ]] && alias rvim='rvim -X'
 [[ -n "$_has_vim" ]] && alias rview='rview -X'
 [[ -n "$_has_nvim" ]] && alias nv='nvim'
