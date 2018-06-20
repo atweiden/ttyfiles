@@ -43,7 +43,7 @@ export MANPAGER="less $LESS"
 # --- end man pages }}}
 # --- opener {{{
 
-export OPENER='xdg-open'
+export OPENER='vim'
 
 # --- end opener }}}
 # --- safety {{{
