@@ -121,7 +121,7 @@ clear # bring us back to default input colours
 # --- remove ctrl-s ctrl-q {{{
 
 # remove the ^S ^Q mappings. See all mappings: stty -a
-[[ $- =~ i ]] && stty -ixoff -ixon
+stty -ixoff -ixon
 stty stop undef
 stty start undef
 
