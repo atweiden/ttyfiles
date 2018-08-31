@@ -545,9 +545,12 @@ export FZF_DEFAULT_OPTS='
   && export FZF_CTRL_T_OPTS="--preview '(cat {} || tree -C {}) 2> /dev/null | head -200'"
 export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden --bind ?:toggle-preview"
 
-# create fzf key bindings
-[[ -e "/etc/profile.d/fzf.bash" ]] && source /etc/profile.d/fzf.bash
-[[ -e "/etc/profile.d/fzf-extras.bash" ]] && source /etc/profile.d/fzf-extras.bash
+# source fzf key bindings
+[[ -e "/etc/profile.d/fzf.bash" ]] \
+  && source /etc/profile.d/fzf.bash
+# source fzf functions
+[[ -e "/etc/profile.d/fzf-extras.bash" ]] \
+  && source /etc/profile.d/fzf-extras.bash
 
 # end fzf }}}
 # ==============================================================================
