@@ -4,4 +4,4 @@
 # battery: show battery remaining
 # ----------------------------------------------------------------------------
 
-acpi --battery | awk '{print $4}' | sed 's/%,$//'
+echo "$(acpi --battery | awk '{print $4}' | sed 's/%,$//')%"
