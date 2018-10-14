@@ -164,4 +164,4 @@ sed -i "s#youremail#$email#"       "$HOME/.config/hg/hgrc"
 
 chmod 700 "$HOME/.gnupg" "$HOME/.ssh"
 
-# vim: set filetype=sh foldmethod=marker foldlevel=0:
+# vim: set filetype=sh foldmethod=marker foldlevel=0 nowrap:

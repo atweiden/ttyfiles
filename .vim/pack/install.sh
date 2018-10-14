@@ -112,4 +112,4 @@ package() {
  wait) &
 wait
 
-# vim: set filetype=sh foldmethod=marker foldlevel=0:
+# vim: set filetype=sh foldmethod=marker foldlevel=0 nowrap:
