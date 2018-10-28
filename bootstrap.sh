@@ -9,7 +9,10 @@ read -r -d '' _usage_string <<EOF
 Usage:
   ./bootstrap.sh [-h|--help]
   ./bootstrap.sh [-u|--username <username>]
-  ./bootstrap.sh [-n|--name <name>] [-e|--email <email>] [-g|--github <github>]
+  ./bootstrap.sh [-n|--name <name>]
+                 [-e|--email <email>]
+                 [-g|--github <github>]
+                 [-i|--irssi <irssi>]
 
 Options:
   -h, --help
@@ -22,6 +25,8 @@ Options:
     set email address (defaults to "archbaum@gmail.com")
   -g, --github <github>
     set GitHub username (defaults to "atweiden")
+  -i, --irssi <irssi>
+    set irssi username (defaults to "atweiden")
 EOF
 echo "$_usage_string"
 }
@@ -53,6 +58,11 @@ while [[ $# -gt 0 ]]; do
       shift
       shift
       ;;
+    -i|--irssi)
+      _irssi="$2"
+      shift
+      shift
+      ;;
     *)
       # unknown option
       _usage_function
@@ -70,6 +80,7 @@ username="${_username:-$USER}"         # User    (yay)
 name="${_name:-Andy Weidenbaum}"       # Name    (GitHub/AUR)
 email="${_email:-archbaum@gmail.com}"  # Email   (GitHub/AUR)
 github="${_github:-atweiden}"          # Account (GitHub)
+irssi="${_irssi:-atweiden}"            # Account (IRC)
 
 
 # -----------------------------------------------------------------------------
@@ -156,6 +167,13 @@ sed -i "s#youremail#$email#"       "$HOME/.config/git/config"
 sed -i "s#yourgithubacct#$github#" "$HOME/.config/git/config"
 sed -i "s#yourname#$name#"         "$HOME/.config/hg/hgrc"
 sed -i "s#youremail#$email#"       "$HOME/.config/hg/hgrc"
+
+
+# -----------------------------------------------------------------------------
+# irssi
+# -----------------------------------------------------------------------------
+
+sed -i "s#yourname#$irssi#"        "$HOME/.config/irssi/config"
 
 
 # -----------------------------------------------------------------------------
