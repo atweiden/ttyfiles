@@ -668,6 +668,9 @@ export FZF_CTRL_R_OPTS="--preview 'echo {}' \
   --preview-window down:3:hidden \
   --bind ?:toggle-preview"
 
+# source fzf completions
+[[ -r '/usr/share/bash-completion/completions/fzf' ]] \
+  && source /usr/share/bash-completion/completions/fzf
 # source fzf key bindings
 [[ -r '/etc/profile.d/fzf.bash' ]] \
   && source /etc/profile.d/fzf.bash
