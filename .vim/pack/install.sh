@@ -97,6 +97,7 @@ package() {
  package 'atweiden/vim-finn' &
  package 'vim-perl/vim-perl' &
  package 'vim-perl/vim-perl6' &
+ package 'jordwalke/vim-reasonml' &
  package 'cespare/vim-toml' &
  wait) &
 (set_dir 'textobj' 'start'
