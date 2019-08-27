@@ -71,6 +71,9 @@ package() {
  package 'Konfekt/FastFold' &
  package 'Harenome/vim-neatfoldtext' &
  wait) &
+(set_dir 'filesystem' 'start'
+ package 'duggiefresh/vim-easydir' &
+ wait) &
 (set_dir 'keyboard' 'opt'
  package 'kana/vim-arpeggio' &
  wait) &
