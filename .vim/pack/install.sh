@@ -94,7 +94,7 @@ package() {
 (set_dir 'surround' 'start'
  package 'tpope/vim-surround' &
  wait) &
-(set_dir 'syntax' 'start'
+(set_dir 'syntax' 'opt'
  package 'elixir-editors/vim-elixir' &
  package 'junegunn/vim-journal' &
  package 'atweiden/vim-finn' &
