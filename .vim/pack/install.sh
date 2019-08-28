@@ -64,9 +64,6 @@ package() {
 (set_dir 'comments' 'start'
  package 'tpope/vim-commentary' &
  wait) &
-(set_dir 'crypto' 'start'
- package 'jamessan/vim-gnupg' &
- wait) &
 (set_dir 'folds' 'start'
  package 'Konfekt/FastFold' &
  package 'Harenome/vim-neatfoldtext' &
