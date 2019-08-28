@@ -55,7 +55,7 @@ package() {
 (set_dir 'color-utils' 'start'
  package 'mhinz/vim-hugefile' &
  wait) &
-(set_dir 'colors' 'opt'
+(set_dir 'colors' 'start'
  package 'atweiden/vim-colors-miro8' &
  wait) &
 (set_dir 'command-runners' 'opt'

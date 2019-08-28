@@ -1,5 +1,4 @@
 set background=dark
-packadd vim-colors-miro8
 colorscheme miro8
 
 " highlighting {{{
