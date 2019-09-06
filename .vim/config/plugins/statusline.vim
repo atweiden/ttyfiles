@@ -19,6 +19,10 @@ function! GitBranch() abort
   return b:git_branch
 endfunction
 
+" refresh git branch periodically
+autocmd BufEnter,BufWritePost,CursorHold,CursorHoldI,FocusGained <buffer>
+  \ silent! unlet b:git_branch
+
 function! VimMode() abort
   return get(s:vim_mode_map, mode(), '[no mode]')
 endfunction
