@@ -52,10 +52,12 @@ package() {
   fi
 }
 
+(set_dir 'color-utils' 'opt'
+ package 'junegunn/rainbow_parentheses.vim' &
+ wait) &
 (set_dir 'color-utils' 'start'
  package 'ntpeters/vim-better-whitespace' &
  package 'mhinz/vim-hugefile' &
- package 'junegunn/rainbow_parentheses.vim' &
  wait) &
 (set_dir 'colors' 'start'
  package 'atweiden/vim-colors-miro8' &
