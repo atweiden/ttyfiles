@@ -53,6 +53,7 @@ package() {
 }
 
 (set_dir 'color-utils' 'start'
+ package 'junegunn/rainbow_parentheses.vim' &
  package 'mhinz/vim-hugefile' &
  wait) &
 (set_dir 'colors' 'start'
