@@ -38,16 +38,19 @@ set statusline+=%{'\ \ '}
 set statusline+=%{VimMode()}
 set statusline+=%{'\ \ │\ '}
 
+" paste mode
+set statusline+=%{&paste?'PASTE\ │\ ':''}
+
 " git branch
 set statusline+=%{GitBranch()!=#''?'¥\ '.GitBranch().'\ │\ ':''}
 
-" read only?
+" read only
 set statusline+=%{&readonly?'©\ ':''}
 
 " file path, as typed or relative to current directory
 set statusline+=%f
 
-" modified?
+" modified
 set statusline+=%{&modified?'\ +':''}
 
 " separation point between left and right aligned items
