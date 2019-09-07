@@ -53,6 +53,7 @@ package() {
 }
 
 (set_dir 'color-utils' 'start'
+ package 'ntpeters/vim-better-whitespace' &
  package 'junegunn/rainbow_parentheses.vim' &
  package 'mhinz/vim-hugefile' &
  wait) &
