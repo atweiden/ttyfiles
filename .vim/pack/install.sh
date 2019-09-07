@@ -52,6 +52,10 @@ package() {
   fi
 }
 
+(set_dir 'align' 'opt'
+ package 'tommcdo/vim-lion' &
+ package 't9md/vim-textmanip' &
+ wait) &
 (set_dir 'color-utils' 'opt'
  package 'junegunn/rainbow_parentheses.vim' &
  wait) &
@@ -77,6 +81,9 @@ package() {
  wait) &
 (set_dir 'keyboard' 'opt'
  package 'kana/vim-arpeggio' &
+ wait) &
+(set_dir 'keyboard' 'start'
+ package 'drmikehenry/vim-fixkey' &
  wait) &
 (set_dir 'modelines' 'start'
  package 'ciaranm/securemodelines' &
@@ -108,6 +115,9 @@ package() {
  package 'wellle/targets.vim' &
  package 'kana/vim-textobj-entire' &
  package 'kana/vim-textobj-user' &
+ wait) &
+(set_dir 'undo' 'opt'
+ package 'mbbill/undotree' &
  wait) &
 (set_dir 'windows' 'start'
  package 'talek/obvious-resize' &
