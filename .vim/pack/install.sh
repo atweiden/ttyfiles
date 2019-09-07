@@ -54,8 +54,8 @@ package() {
 
 (set_dir 'color-utils' 'start'
  package 'ntpeters/vim-better-whitespace' &
- package 'junegunn/rainbow_parentheses.vim' &
  package 'mhinz/vim-hugefile' &
+ package 'junegunn/rainbow_parentheses.vim' &
  wait) &
 (set_dir 'colors' 'start'
  package 'atweiden/vim-colors-miro8' &
@@ -95,8 +95,8 @@ package() {
  wait) &
 (set_dir 'syntax' 'opt'
  package 'elixir-editors/vim-elixir' &
- package 'junegunn/vim-journal' &
  package 'atweiden/vim-finn' &
+ package 'junegunn/vim-journal' &
  package 'vim-perl/vim-perl' &
  package 'vim-perl/vim-perl6' &
  package 'jordwalke/vim-reasonml' &
