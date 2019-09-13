@@ -106,6 +106,7 @@ package() {
  package 'elixir-editors/vim-elixir' &
  package 'atweiden/vim-finn' &
  package 'junegunn/vim-journal' &
+ package 'alaviss/nim.nvim' &
  package 'vim-perl/vim-perl' &
  package 'vim-perl/vim-perl6' &
  package 'jordwalke/vim-reasonml' &
