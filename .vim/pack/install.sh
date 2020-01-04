@@ -106,8 +106,7 @@ package() {
  package 'elixir-editors/vim-elixir' &
  package 'atweiden/vim-finn' &
  package 'junegunn/vim-journal' &
- package 'vim-perl/vim-perl' &
- package 'vim-perl/vim-perl6' &
+ package 'Raku/vim-raku' &
  package 'jordwalke/vim-reasonml' &
  package 'cespare/vim-toml' &
  wait) &
