@@ -297,7 +297,7 @@ alias l1='ls -1A'
 alias la='ls -a'
 alias ll='ls -laih'
 [[ -n "$_has_tree" ]] \
-  && alias tree='tree -C --charset utf-8 --dirsfirst'
+  && alias tree='tree -FC --charset ascii --dirsfirst'
 alias ..='cd ..'
 alias ..2='cd ../..'
 alias ..3='cd ../../..'
