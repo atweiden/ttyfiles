@@ -124,4 +124,8 @@ set lazyredraw
 " indicates fast terminal connection
 set ttyfast
 
+" use histogram diff algorithm, indent heuristic for internal diff library
+set diffopt+=algorithm:histogram
+set diffopt+=indent-heuristic
+
 " vim: set filetype=vim foldmethod=marker foldlevel=0 nowrap:
