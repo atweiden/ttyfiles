@@ -74,3 +74,5 @@ pager = LESS='FSRX' less
 
 [progress]
 delay = 1.5
+
+# vim: set filetype=cfg foldmethod=marker foldlevel=0 nowrap:
