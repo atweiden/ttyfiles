@@ -427,14 +427,6 @@ alias ps='ps --forest'
 alias r='repl'
 
 # --- end repl }}}
-# --- subrepo {{{
-
-[[ -n "$_has_subgit" ]] \
-  && alias sg='subgit'
-[[ -n "$_has_subhg" ]] \
-  && alias shg='subhg'
-
-# --- end subrepo }}}
 # --- safety {{{
 
 alias cp='cp -i'
@@ -456,6 +448,14 @@ alias timer='echo "Timer started. Stop with Ctrl-D." \
   && date'
 
 # --- end stopwatch }}}
+# --- subrepo {{{
+
+[[ -n "$_has_subgit" ]] \
+  && alias sg='subgit'
+[[ -n "$_has_subhg" ]] \
+  && alias shg='subhg'
+
+# --- end subrepo }}}
 # --- systemctl {{{
 
 [[ -n "$_has_systemctl" ]] \
