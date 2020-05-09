@@ -1,15 +1,30 @@
 set background=dark
 colorscheme miro8
+set guicursor=
+
+" neovim {{{
+
+if has('nvim')
+  " set all cursors to 20% height unblinking block by default
+  set guicursor+=a:blinkon0-hor20
+  " set insert mode cursor to 25% width unblinking block
+  set guicursor+=i:blinkon0-ver25
+  " set :terminal cursor to URxvt-like underline
+  highlight clear TermCursor
+  highlight TermCursor ctermfg=red cterm=underline gui=underline
+  highlight clear TermCursorNC
+  highlight TermCursorNC ctermfg=red cterm=underline gui=underline
+endif
+
+" end neovim }}}
 
 " highlighting {{{
 
 " turn off any existing search
-if has('autocmd')
-  augroup searchhighlight
-    autocmd!
-    autocmd VimEnter * nohls
-  augroup END
-endif
+augroup searchhighlight
+  autocmd!
+  autocmd VimEnter * nohls
+augroup END
 
 " searches
 highlight clear Search
@@ -74,14 +89,6 @@ highlight DiffChange ctermbg=0
 
 " use reverse foreground colors for +legibility (-consistency of color)
 highlight DiffText cterm=reverse ctermbg=none
-
-" neovim terminal URxvt-like underline cursor
-if has('nvim')
-  highlight clear TermCursor
-  highlight TermCursor ctermfg=red cterm=underline gui=underline
-  highlight clear TermCursorNC
-  highlight TermCursorNC ctermfg=red cterm=underline gui=underline
-endif
 
 " end highlighting }}}
 
