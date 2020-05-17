@@ -109,7 +109,6 @@ package() {
  package 'elixir-editors/vim-elixir' &
  package 'atweiden/vim-finn' &
  package 'junegunn/vim-journal' &
- package 'bakpakin/fennel.vim' &
  package 'janet-lang/janet.vim' &
  package 'Raku/vim-raku' &
  package 'jordwalke/vim-reasonml' &
