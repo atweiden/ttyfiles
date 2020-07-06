@@ -16,8 +16,8 @@ nnoremap g. :normal! `[v`]<CR><Left>
 " preserve selection when indenting
 vnoremap > >gv
 vnoremap < <gv
-nnoremap > >>
-nnoremap < <<
+nnoremap <expr> > Repeatable('Indent')
+nnoremap <expr> < Repeatable('Dedent')
 
 " end selecting }}}
 " search and replace {{{
@@ -263,7 +263,7 @@ nnoremap <silent> S i<CR><ESC>^mwgk:silent! s/\v +$//<CR>:noh<CR>`w
 " deletes {{{
 
 " delete char adjacent-right without moving cursor over one from the left
-nnoremap <silent> gx @='lxh'<CR>
+nnoremap <expr> gx Repeatable('DeleteCharRight')
 
 " end deletes }}}
 " movement {{{
