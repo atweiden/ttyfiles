@@ -115,10 +115,6 @@ package() {
  package 'jordwalke/vim-reasonml' &
  package 'cespare/vim-toml' &
  wait) &
-(set_dir 'textobj' 'start'
- package 'kana/vim-textobj-entire' &
- package 'kana/vim-textobj-user' &
- wait) &
 (set_dir 'undo' 'opt'
  package 'mbbill/undotree' &
  wait) &
