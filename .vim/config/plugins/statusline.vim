@@ -1,16 +1,16 @@
 let s:vim_mode_map = {
-  \   'n': 'NORMAL',
-  \   'i': 'INSERT',
-  \   'R': 'REPLACE',
-  \   'v': 'VISUAL',
-  \   'V': 'V-LINE',
-  \   "\<C-v>": 'V-BLOCK',
-  \   'c': 'COMMAND',
-  \   's': 'SELECT',
-  \   'S': 'S-LINE',
-  \   "\<C-s>": 'S-BLOCK',
-  \   't': 'TERMINAL'
-  \ }
+    \ 'n': 'NORMAL',
+    \ 'i': 'INSERT',
+    \ 'R': 'REPLACE',
+    \ 'v': 'VISUAL',
+    \ 'V': 'V-LINE',
+    \ "\<C-v>": 'V-BLOCK',
+    \ 'c': 'COMMAND',
+    \ 's': 'SELECT',
+    \ 'S': 'S-LINE',
+    \ "\<C-s>": 'S-BLOCK',
+    \ 't': 'TERMINAL'
+    \ }
 
 function! GitBranch() abort
   if !exists('b:git_branch')
