@@ -24,6 +24,7 @@ augroup gitbranch
   autocmd!
   autocmd BufEnter,BufWritePost,CursorHold,CursorHoldI,FocusGained <buffer>
     \ silent! unlet b:git_branch
+    \ | silent! redraw
 augroup END
 
 function! VimMode() abort
