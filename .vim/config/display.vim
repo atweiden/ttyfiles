@@ -1,5 +1,5 @@
 set background=dark
-colorscheme miro8
+silent! colorscheme miro8
 set guicursor=
 
 " neovim {{{

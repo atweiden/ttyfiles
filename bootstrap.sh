@@ -132,13 +132,7 @@ _rsync_opts+=('--perms')
 _rsync_opts+=('--backup'
               "--backup-dir=$HOME/.local/share/dotfiles")
 
-# output numbers in a more human-readable format
-_rsync_opts+=('--human-readable')
-
-# print information showing the progress of the transfer
-_rsync_opts+=('--progress')
-
-rsync --verbose "${_rsync_opts[@]}" "$DIR/" "$HOME"
+rsync "${_rsync_opts[@]}" "$DIR/" "$HOME"
 
 
 # -----------------------------------------------------------------------------
