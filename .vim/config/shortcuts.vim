@@ -316,7 +316,7 @@ nnoremap <silent> <M-L> <C-W>L
 " screen {{{
 
 " redraw screen
-nnoremap <silent> <leader><leader><CR> :redraw!
+nnoremap <silent> <leader><leader><CR> :redraw!<CR>
 
 " end screen }}}
 
