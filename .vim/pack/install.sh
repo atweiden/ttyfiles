@@ -85,9 +85,6 @@ package() {
 (set_dir 'keyboard' 'start'
  package 'drmikehenry/vim-fixkey' &
  wait) &
-(set_dir 'cursor' 'start'
- package 'nickeb96/vitality.vim' &
- wait) &
 (set_dir 'modelines' 'start'
  package 'ciaranm/securemodelines' &
  wait) &
