@@ -14,7 +14,7 @@ let s:vim_mode_map = {
 
 function! GitBranch() abort
   if !exists('b:git_branch')
-    let b:git_branch = substitute(strtrans(system("git rev-parse --abbrev-ref HEAD 2>/dev/null")),'\^@','','g')
+    silent! let b:git_branch = substitute(strtrans(system("git rev-parse --abbrev-ref HEAD 2>/dev/null")),'\^@','','g')
   endif
   return b:git_branch
 endfunction
