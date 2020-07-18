@@ -38,9 +38,9 @@ highlight MatchParen term=bold,NONE cterm=bold,NONE ctermfg=179 gui=bold,NONE gu
 
 " cursor line and column
 highlight clear CursorLine
-highlight CursorLine term=NONE cterm=NONE ctermbg=234 gui=NONE guibg=#E3E7E4
+highlight CursorLine term=NONE cterm=NONE ctermbg=234 gui=NONE guibg=#FFFCFA
 highlight clear CursorColumn
-highlight CursorColumn term=NONE cterm=NONE ctermbg=234 gui=NONE guibg=#E3E7E4
+highlight CursorColumn term=NONE cterm=NONE ctermbg=234 gui=NONE guibg=#FFFCFA
 highlight clear ColorColumn
 highlight ColorColumn term=NONE cterm=NONE ctermbg=95 gui=NONE guibg=#875F5F
 
@@ -63,6 +63,15 @@ highlight MoreMsg term=bold cterm=bold ctermfg=179 gui=bold guifg=#4E4E43
 " directories
 highlight clear Directory
 highlight Directory term=bold cterm=bold ctermfg=110 gui=bold guifg=#87AFD7
+
+" whitespace
+if !has('nvim')
+  " vim uses hl-SpecialKey for nbsp, space, tab and trail
+  highlight SpecialKey ctermfg=234 guifg=#F4F4F4
+else
+  " neovim uses hl-WhiteSpace for nbsp, space, tab and trail
+  highlight WhiteSpace ctermfg=234 guifg=#F4F4F4
+endif
 
 " spelling
 highlight clear SpellBad
@@ -92,16 +101,13 @@ highlight DiffText cterm=reverse ctermbg=none
 
 " end highlighting }}}
 
-" show listchars {{{
+" listchars {{{
 
-set nolist
-set listchars =tab:▷⋅
-set listchars+=extends:›
-set listchars+=precedes:‹
-set listchars+=nbsp:·
-set listchars+=trail:·
+set list
+call SetListCharsTabVisible()
+call SetListCharsRemaining()
 
-" end show listchars }}}
+" end listchars }}}
 
 " screen {{{
 
