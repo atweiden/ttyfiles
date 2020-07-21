@@ -11,6 +11,18 @@ let g:fzf_buffers_jump = 1
 let g:fzf_files_options = printf('--preview "%s {} | head -' . &lines . '"',
   \ $VIMPATH . '/pack/search-replace/start/fzf.vim/bin/preview.sh')
 
+" paint pleasant monotone statusline in fzf buffer
+" fixes disappearing statusline in main vim window
+function! s:fzf_statusline()
+  highlight fzf1 ctermbg=95 guibg=#DFFFFF
+  setlocal statusline=%#fzf1#%{'\ '}
+endfunction
+
+augroup fzfstatusline
+  autocmd!
+  autocmd User FzfStatusLine call <SID>fzf_statusline()
+augroup END
+
 " :FZFAg  - start fzf with hidden preview window, enabled with `?` key
 " :FZFAg! - start fzf in fullscreen and display preview window above
 command! -bang -nargs=* FZFAg
