@@ -93,7 +93,7 @@ package() {
  package 'christoomey/vim-tmux-navigator' &
  wait) &
 (set_dir 'narrow-region' 'opt'
- package 'Jorengarenar/ViewPort' &
+ package 'atweiden/vim-viewport' &
  wait) &
 (set_dir 'repeat' 'start'
  package 'tpope/vim-repeat' &
