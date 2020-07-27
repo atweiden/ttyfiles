@@ -66,7 +66,7 @@ vnoremap <silent> K mzgq`z
 " writing {{{
 
 " quick write
-nnoremap <silent> <leader>w :w<CR>
+nnoremap <silent> <leader>w :update<CR>
 
 " sudo write
 command! W execute 'silent! write !sudo tee % >/dev/null' <Bar> edit!
