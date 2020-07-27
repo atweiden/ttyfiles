@@ -144,4 +144,7 @@ set ttyfast
 set diffopt+=algorithm:histogram
 set diffopt+=indent-heuristic
 
+" format lines with fmt
+set formatprg=fmt
+
 " vim: set filetype=vim foldmethod=marker foldlevel=0 nowrap:
