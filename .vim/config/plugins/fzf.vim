@@ -65,6 +65,9 @@ inoremap <expr> <C-X><C-L> fzf#vim#complete(fzf#wrap({
     \ 'reducer': { lines -> join(split(lines[0], ':\zs')[2:], '') }
     \ }))
 
+" search with ag from cwd
+nnoremap <silent> <C-F> :FZFAg<CR>
+
 " open files from cwd
 nnoremap <silent> <leader>o :FZFFiles<CR>
 
