@@ -137,8 +137,11 @@ set updatecount=20
 " do not redraw screen when executing macros
 set lazyredraw
 
-" indicates fast terminal connection
+" improve redraw performance
 set ttyfast
+
+" make syntax highlighting more robust post vim 8
+set redrawtime=10000
 
 " use histogram diff algorithm, indent heuristic for internal diff library
 set diffopt+=algorithm:histogram

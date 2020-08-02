@@ -334,7 +334,7 @@ tnoremap <silent> <M-L> <C-W>L
 " screen {{{
 
 " redraw screen
-nnoremap <silent> <leader><leader><CR> :redraw!<CR>
+nnoremap <silent> <leader><leader><CR> :redraw!<CR>:syntax sync fromstart<CR>
 
 " end screen }}}
 
