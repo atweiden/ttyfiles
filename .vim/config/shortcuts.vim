@@ -268,7 +268,7 @@ nnoremap <silent> <localleader>m zm
 nnoremap <silent> <localleader>M zM
 
 " recursively close current fold
-nnoremap <silent> <localleader>C zC
+noremap <silent> <localleader>C zC
 
 " fold less
 nnoremap <silent> <localleader>r zr
@@ -277,7 +277,7 @@ nnoremap <silent> <localleader>r zr
 nnoremap <silent> <localleader>R zR
 
 " recursively open current fold
-nnoremap <silent> <localleader>O zO
+noremap <silent> <localleader>O zO
 
 " focus current line with minimal number of folds open
 nnoremap <silent> <leader><space> zMzvzz
