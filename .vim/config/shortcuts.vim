@@ -172,12 +172,9 @@ inoremap <silent> <F5> <C-O>:ToggleCursorcolumnCursorline<CR>
 vnoremap <silent> <F5> <ESC>:ToggleCursorcolumnCursorline<CR>gv
 
 " toggle line numbers
-nnoremap <silent> <F6> :set nonumber norelativenumber<CR>
-inoremap <silent> <F6> <C-O>:set nonumber norelativenumber<CR>
-vnoremap <silent> <F6> <ESC>:set nonumber norelativenumber<CR>gv
-nnoremap <silent> <S-F6> :set number relativenumber<CR>
-inoremap <silent> <S-F6> <C-O>:set number relativenumber<CR>
-vnoremap <silent> <S-F6> <ESC>:set number relativenumber<CR>gv
+nnoremap <silent> <F6> :ToggleLineNumbers<CR>
+inoremap <silent> <F6> <C-O>:ToggleLineNumbers<CR>
+vnoremap <silent> <F6> <ESC>:ToggleLineNumbers<CR>gv
 
 " scroll all windows simultaneously
 nnoremap <silent> <F9> :windo set scrollbind!<CR>
