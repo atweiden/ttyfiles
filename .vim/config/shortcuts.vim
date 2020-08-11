@@ -176,6 +176,11 @@ nnoremap <silent> <F6> :ToggleLineNumbers<CR>
 inoremap <silent> <F6> <C-O>:ToggleLineNumbers<CR>
 vnoremap <silent> <F6> <ESC>:ToggleLineNumbers<CR>gv
 
+" toggle laststatus=2
+nnoremap <silent> <S-F6> :ToggleLaststatus<CR>
+inoremap <silent> <S-F6> <C-O>:ToggleLaststatus<CR>
+vnoremap <silent> <S-F6> <ESC>:ToggleLaststatus<CR>gv
+
 " scroll all windows simultaneously
 nnoremap <silent> <F9> :windo set scrollbind!<CR>
 inoremap <silent> <F9> <C-O>:windo set scrollbind!<CR>
