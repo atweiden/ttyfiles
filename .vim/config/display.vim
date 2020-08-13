@@ -125,13 +125,10 @@ highlight clear Directory
 highlight Directory term=bold cterm=bold ctermfg=110 gui=bold guifg=#87AFD7
 
 " whitespace
-if !has('nvim')
-  " vim uses hl-SpecialKey for nbsp, space, tab and trail
-  highlight SpecialKey ctermfg=234 guifg=#F4F4F4
-else
-  " neovim uses hl-WhiteSpace for nbsp, space, tab and trail
-  highlight WhiteSpace ctermfg=234 guifg=#F4F4F4
-endif
+" vim uses hl-SpecialKey for nbsp, space, tab and trail
+highlight SpecialKey ctermfg=234 guifg=#F4F4F4
+" neovim uses hl-WhiteSpace for nbsp, space, tab and trail
+highlight WhiteSpace ctermfg=234 guifg=#F4F4F4
 
 " spelling
 highlight clear SpellBad
