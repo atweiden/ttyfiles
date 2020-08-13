@@ -126,8 +126,10 @@ highlight Directory term=bold cterm=bold ctermfg=110 gui=bold guifg=#87AFD7
 
 " whitespace
 " vim uses hl-SpecialKey for nbsp, space, tab and trail
+highlight clear SpecialKey
 highlight SpecialKey ctermfg=234 guifg=#F4F4F4
 " neovim uses hl-WhiteSpace for nbsp, space, tab and trail
+highlight clear WhiteSpace
 highlight WhiteSpace ctermfg=234 guifg=#F4F4F4
 
 " spelling
