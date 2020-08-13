@@ -1,6 +1,64 @@
+" base {{{
+
+" configure colors
 set background=dark
 silent! colorscheme miro8
+
+" clear cursor styles
 set guicursor=
+
+" disable error noises
+set belloff=all
+set noerrorbells
+set vb t_vb=
+
+" insert N pixel lines between characters
+set linespace=1
+
+" number of screen lines around cursor
+set scrolloff=8
+set sidescrolloff=16
+set sidescroll=1
+
+" show the line number in front of each line
+set number
+
+" show relative line numbers
+set relativenumber
+
+" minimum number of columns to use for the line number
+set numberwidth=1
+
+" indicate wrapped characters
+set showbreak=ø
+
+" don't highlight screen line or column
+set nocursorcolumn
+set nocursorline
+
+" always show status line
+set laststatus=2
+
+" don't highlight matching parens
+set noshowmatch
+
+" highlight search pattern matches
+set hlsearch
+
+" show search pattern matches during pattern entry
+set incsearch
+
+" allow no height, no width windows
+set winminheight=0
+set winminwidth=0
+
+" lower maximum height of popup menu
+set pumheight=20
+
+" make help window more likely to open at half existing window height
+set helpheight=12
+
+" end base }}}
 
 " neovim {{{
 
@@ -14,6 +72,8 @@ if has('nvim')
   highlight TermCursor ctermfg=red cterm=underline gui=underline
   highlight clear TermCursorNC
   highlight TermCursorNC ctermfg=red cterm=underline gui=underline
+  " enable substitution live preview
+  set inccommand=nosplit
 endif
 
 " end neovim }}}
@@ -85,19 +145,6 @@ highlight SpellLocal term=underline cterm=underline
 
 " conflict markers
 match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
-
-" don't distinguish between delete, add and change using bright colors,
-" because:
-"
-" - add: appears opposite filler markers
-" - delete: appears opposite filler markers
-" - change: appears highlighted in changed portion of line
-highlight DiffAdd ctermbg=0
-highlight DiffDelete ctermbg=0
-highlight DiffChange ctermbg=0
-
-" use reverse foreground colors for +legibility (-consistency of color)
-highlight DiffText cterm=reverse ctermbg=none
 
 " end highlighting }}}
 
