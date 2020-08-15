@@ -1,5 +1,3 @@
-" base {{{
-
 " clear cursor styles
 set guicursor=
 
@@ -53,8 +51,6 @@ set pumheight=20
 
 " make help window more likely to open at half existing window height
 set helpheight=12
-
-" end base }}}
 
 " highlighting {{{
 
@@ -154,7 +150,6 @@ let g:seoul256_light_background = 256
 silent! colorscheme seoul256
 
 " end highlighting }}}
-
 " neovim {{{
 
 if has('nvim')
@@ -168,7 +163,6 @@ if has('nvim')
 endif
 
 " end neovim }}}
-
 " listchars {{{
 
 set list
@@ -178,7 +172,6 @@ set listchars+=extends:›
 set listchars+=precedes:‹
 
 " end listchars }}}
-
 " screen {{{
 
 " turn off syntax coloring of long lines
