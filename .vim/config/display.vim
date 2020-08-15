@@ -157,8 +157,10 @@ endif
 " listchars {{{
 
 set list
-call SetListCharsTabVisible()
-call SetListCharsRemaining()
+execute 'set listchars=tab:¦\ '
+set listchars+=nbsp:·
+set listchars+=extends:›
+set listchars+=precedes:‹
 
 " end listchars }}}
 
