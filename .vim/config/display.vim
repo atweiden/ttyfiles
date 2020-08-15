@@ -32,8 +32,8 @@ set showbreak=ø
 set nocursorcolumn
 set nocursorline
 
-" always show status line
-set laststatus=2
+" don't show status line
+set laststatus=0
 
 " don't highlight matching parens
 set noshowmatch
