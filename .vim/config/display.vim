@@ -33,6 +33,9 @@ set nocursorline
 " don't show status line
 set laststatus=0
 
+" don't show active mode on last line, status line has this covered
+set noshowmode
+
 " don't highlight matching parens
 set noshowmatch
 
