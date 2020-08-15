@@ -139,10 +139,6 @@ silent! colorscheme miro8
 " neovim {{{
 
 if has('nvim')
-  " set all cursors to 20% height unblinking block by default
-  set guicursor+=a:blinkon0-hor20
-  " set insert mode cursor to 25% width unblinking block
-  set guicursor+=i:blinkon0-ver25
   " set :terminal cursor to URxvt-like underline
   highlight clear TermCursor
   highlight TermCursor ctermfg=red cterm=underline gui=underline
