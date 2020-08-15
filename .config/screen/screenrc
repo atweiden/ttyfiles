@@ -4,8 +4,8 @@ startup_message off
 # use user-defined shell
 shell "$SHELL"
 
-# set default TERM to screen
-term screen
+# set default TERM to screen-256color
+term screen-256color
 
 # do not attempt Xserver connection
 unsetenv DISPLAY

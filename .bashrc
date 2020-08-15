@@ -128,6 +128,10 @@ export XDG_DATA_HOME="$HOME/.local/share"
 
 # --- display {{{
 
+if [[ "$TERM" == 'linux' ]]; then
+  export TERM='linux-16color'
+fi
+
 # miromiro dircolors by jwr
 [[ -f "$HOME/.config/dircolors" ]] \
   && eval $(dircolors -b "$HOME/.config/dircolors")
