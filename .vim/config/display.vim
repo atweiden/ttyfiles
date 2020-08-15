@@ -131,6 +131,7 @@ augroup END
 match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
 
 " colorscheme
+set t_Co=16
 set background=dark
 silent! colorscheme miro8
 
