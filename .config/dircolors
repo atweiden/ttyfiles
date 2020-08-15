@@ -271,6 +271,7 @@ TERM jfbterm
 TERM konsole
 TERM kterm
 TERM linux
+TERM linux-16color
 TERM linux-c
 TERM mach-color
 TERM mlterm
