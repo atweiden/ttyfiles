@@ -64,7 +64,7 @@ package() {
  package 'mhinz/vim-hugefile' &
  wait) &
 (set_dir 'colors' 'start'
- package 'atweiden/vim-colors-miro8' &
+ package 'atweiden/seoul256.vim' &
  wait) &
 (set_dir 'command-runners' 'opt'
  package 'tpope/vim-tbone' &
