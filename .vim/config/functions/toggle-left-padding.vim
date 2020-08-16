@@ -1,7 +1,7 @@
 function! ToggleLeftPadding() abort
   if &foldcolumn == 0
     highlight clear FoldColumn
-    highlight FoldColumn ctermfg=bg ctermbg=bg
+    highlight FoldColumn ctermfg=0 ctermbg=0
     set foldcolumn=1
   else
     " restore FoldColumn highlighting to original with :q
