@@ -51,7 +51,7 @@ set statusline+=%{GitBranch()!=#''?'¥\ '.GitBranch().'\ │\ ':''}
 set statusline+=%{&readonly?'©\ ':''}
 
 " file path, as typed or relative to current directory
-set statusline+=%f
+set statusline+=%t
 
 " modified
 set statusline+=%{&modified?'\ +':''}
