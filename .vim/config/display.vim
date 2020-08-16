@@ -112,10 +112,10 @@ function! Highlight() abort
   " whitespace
   " vim uses hl-SpecialKey for nbsp, space, tab and trail
   highlight clear SpecialKey
-  highlight SpecialKey ctermfg=234 guifg=#F4F4F4
+  highlight default link SpecialKey NonText
   " neovim uses hl-WhiteSpace for nbsp, space, tab and trail
   highlight clear WhiteSpace
-  highlight WhiteSpace ctermfg=234 guifg=#F4F4F4
+  highlight default link Whitespace NonText
 
   " spelling
   highlight clear SpellBad
