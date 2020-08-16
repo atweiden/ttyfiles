@@ -109,12 +109,6 @@ function! Highlight() abort
   highlight clear Directory
   highlight Directory term=bold cterm=bold ctermfg=110 gui=bold guifg=#87AFD7
 
-  " wild menu completion
-  highlight clear StatusLine
-  highlight StatusLine term=reverse cterm=reverse ctermfg=234 ctermbg=242 gui=reverse guifg=#FFFFFF guibg=#B2B2B2
-  highlight clear WildMenu
-  highlight WildMenu term=bold cterm=bold ctermfg=87 ctermbg=234 gui=bold guifg=#D8AF5F guibg=#FFFFFF
-
   " whitespace
   " vim uses hl-SpecialKey for nbsp, space, tab and trail
   highlight clear SpecialKey
