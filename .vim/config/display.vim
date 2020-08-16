@@ -73,41 +73,41 @@ set helpheight=12
 function! Highlight() abort
   " searches
   highlight clear Search
-  highlight Search term=bold cterm=bold ctermfg=0 ctermbg=116 gui=bold guifg=black guibg=#97DDDF
+  highlight Search term=bold cterm=bold ctermfg=0 ctermbg=116
   highlight clear IncSearch
-  highlight IncSearch term=bold cterm=bold ctermfg=0 ctermbg=217 gui=bold guifg=black guibg=#FFBFBD
+  highlight IncSearch term=bold cterm=bold ctermfg=0 ctermbg=217
 
   " matching parens
   highlight clear MatchParen
-  highlight MatchParen term=bold,NONE cterm=bold,NONE ctermfg=179 gui=bold,NONE guifg=#D7AF5F
+  highlight MatchParen term=bold,NONE cterm=bold,NONE ctermfg=179
 
   " cursor line and column
   highlight clear CursorLine
-  highlight CursorLine term=NONE cterm=NONE ctermbg=234 gui=NONE guibg=#FFFCFA
+  highlight CursorLine term=NONE cterm=NONE ctermbg=234
   highlight clear CursorColumn
-  highlight CursorColumn term=NONE cterm=NONE ctermbg=234 gui=NONE guibg=#FFFCFA
+  highlight CursorColumn term=NONE cterm=NONE ctermbg=234
   highlight clear ColorColumn
-  highlight ColorColumn term=NONE cterm=NONE ctermbg=95 gui=NONE guibg=#875F5F
+  highlight ColorColumn term=NONE cterm=NONE ctermbg=95
 
   " error, warning and mode messages
   highlight clear Error
-  highlight Error ctermfg=gray ctermbg=NONE guifg=gray guibg=NONE
+  highlight Error ctermfg=gray ctermbg=NONE
   highlight clear ErrorMsg
-  highlight ErrorMsg ctermfg=gray ctermbg=NONE guifg=gray guibg=NONE
+  highlight ErrorMsg ctermfg=gray ctermbg=NONE
   highlight clear WarningMsg
-  highlight ErrorMsg ctermfg=gray ctermbg=NONE guifg=gray guibg=NONE
+  highlight ErrorMsg ctermfg=gray ctermbg=NONE
   highlight clear ModeMsg
-  highlight ModeMsg ctermfg=gray ctermbg=NONE guifg=gray guibg=NONE
+  highlight ModeMsg ctermfg=gray ctermbg=NONE
 
   " question and more messages
   highlight clear Question
-  highlight Question term=standout ctermfg=179 gui=bold guifg=#4E4E43
+  highlight Question term=standout ctermfg=179
   highlight clear MoreMsg
-  highlight MoreMsg term=bold cterm=bold ctermfg=179 gui=bold guifg=#4E4E43
+  highlight MoreMsg term=bold cterm=bold ctermfg=179
 
   " directories
   highlight clear Directory
-  highlight Directory term=bold cterm=bold ctermfg=110 gui=bold guifg=#87AFD7
+  highlight Directory term=bold cterm=bold ctermfg=110
 
   " whitespace
   " vim uses hl-SpecialKey for nbsp, space, tab and trail
@@ -165,9 +165,9 @@ silent! colorscheme seoul256
 if has('nvim')
   " set :terminal cursor to URxvt-like underline
   highlight clear TermCursor
-  highlight TermCursor ctermfg=red cterm=underline gui=underline
+  highlight TermCursor ctermfg=red cterm=underline
   highlight clear TermCursorNC
-  highlight TermCursorNC ctermfg=red cterm=underline gui=underline
+  highlight TermCursorNC ctermfg=red cterm=underline
   " enable substitution live preview
   set inccommand=nosplit
 endif

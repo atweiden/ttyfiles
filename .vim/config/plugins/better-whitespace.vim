@@ -8,6 +8,6 @@ let g:better_whitespace_filetypes_blacklist = [
     \ ]
 
 " seoul256 whitespace colors
-highlight ExtraWhitespace ctermbg=168 guibg=#DF5F87
+highlight ExtraWhitespace ctermbg=168
 
 " vim: set filetype=vim foldmethod=marker foldlevel=0 nowrap:
