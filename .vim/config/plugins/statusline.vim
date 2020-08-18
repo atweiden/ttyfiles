@@ -76,7 +76,7 @@ set statusline+=%2p%%
 set statusline+=%{'\ │\ '}
 
 " line number
-set statusline+=%{&number?printf('%3d',line('.')):''}
+set statusline+=%{printf('%3d',line('.'))}
 set statusline+=%{':'}
 
 " virtual column number
