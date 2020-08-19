@@ -154,7 +154,6 @@ match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
 
 " colorscheme
 set t_Co=16
-set background=dark
 if !empty($TMUX)
   let g:seoul256_background = 233
   let g:seoul256_light_background = 256
