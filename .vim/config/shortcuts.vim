@@ -1,10 +1,3 @@
-" bind escape key
-packadd vim-arpeggio
-silent! call arpeggio#load()
-silent! Arpeggio noremap jk <ESC>
-silent! Arpeggio inoremap jk <ESC>
-silent! Arpeggio cnoremap jk <C-C>
-
 " selecting {{{
 
 " visually select text last edited/pasted
