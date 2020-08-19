@@ -18,13 +18,6 @@ call s:source_cfg('shortcuts.vim')
 call s:source_cfg('plugins.vim')
 call s:source_cfg('terminal.vim')
 
-" workaround for https://github.com/vim/vim/issues/6736
-let g:arpeggio_timeoutlen = 34
-silent! packadd vim-arpeggio
-silent! Arpeggio noremap jk <ESC>
-silent! Arpeggio inoremap jk <ESC>
-silent! Arpeggio cnoremap jk <C-C>
-
 filetype plugin indent on
 syntax enable
 
