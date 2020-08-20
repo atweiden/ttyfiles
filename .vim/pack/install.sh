@@ -78,7 +78,7 @@ package() {
  package 'Harenome/vim-neatfoldtext' &
  wait) &
 (set_dir 'keyboard' 'opt'
- package 'atweiden/vim-arpeggio' &
+ package 'kana/vim-arpeggio' &
  wait) &
 (set_dir 'keyboard' 'start'
  package 'drmikehenry/vim-fixkey' &
