@@ -264,10 +264,10 @@ export PS1
 # --- end curl }}}
 # --- dbs {{{
 
-[[ -n "$_has_sqlite3" ]] \
-  && alias sqlite3='sqlite3 -init $HOME/.config/sqlite3/sqliterc'
-[[ -n "$_has_sqlite3" ]] \
-  && alias sql='sqlite3 -interactive :memory:'
+if [[ -n "$_has_sqlite3" ]]; then
+  alias sqlite3='sqlite3 -init $HOME/.config/sqlite3/sqliterc'
+  alias sql='sqlite3 -interactive :memory:'
+fi
 
 # --- end dbs }}}
 # --- diff {{{
@@ -569,10 +569,10 @@ alias dt-zurich='_t=$(TZ=Europe/Zurich dt)            ; echo "[$_t] Zürich"'
 # --- end timestamp }}}
 # --- tmux {{{
 
-[[ -n "$TMUX" ]] \
-  && alias clear='clear; tmux clear-history'
-[[ -n "$TMUX" ]] \
-  && alias reset='reset; tmux clear-history'
+if [[ -n "$TMUX" ]]; then
+  alias clear='clear; tmux clear-history'
+  alias reset='reset; tmux clear-history'
+fi
 
 # --- end tmux }}}
 # --- units {{{
@@ -584,28 +584,23 @@ alias dt-zurich='_t=$(TZ=Europe/Zurich dt)            ; echo "[$_t] Zürich"'
 # --- vim {{{
 
 alias :e='"$EDITOR"'
-# tell vim not to attempt connection with X server
-[[ -n "$_has_vim" ]] \
-  && alias vim='vim -X'
-[[ -n "$_has_vim" ]] \
-  && alias view='vim -R'
-[[ -n "$_has_vim" ]] \
-  && alias vime='vim -u $HOME/.vim/vimrc.encrypt -x'
-[[ -n "$_has_vim" ]] \
-  && alias viml='vim -u $HOME/.vim/vimrc.lite'
-[[ -n "$_has_vim" ]] \
-  && alias vimmin='vim \
+if [[ -n "$_has_vim" ]]; then
+  # tell vim not to attempt connection with X server
+  alias vim='vim -X'
+  alias view='vim -R'
+  alias vime='vim -u $HOME/.vim/vimrc.encrypt -x'
+  alias viml='vim -u $HOME/.vim/vimrc.lite'
+  alias vimmin='vim \
     -u NONE \
     -U NONE \
     --cmd "set nocompatible | syntax on | filetype plugin indent on"'
-[[ -n "$_has_vim" ]] \
-  && alias rvim='rvim -X'
-[[ -n "$_has_vim" ]] \
-  && alias rview='rview -X'
-[[ -n "$_has_nvim" ]] \
-  && alias nv='nvim'
-[[ -n "$_has_nvim" ]] \
-  && alias nview='nvim -R'
+  alias rvim='rvim -X'
+  alias rview='rview -X'
+fi
+if [[ -n "$_has_nvim" ]]; then
+  alias nv='nvim'
+  alias nview='nvim -R'
+fi
 
 # --- end vim }}}
 # --- wget {{{
