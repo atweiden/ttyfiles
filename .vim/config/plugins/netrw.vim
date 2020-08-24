@@ -22,8 +22,15 @@ let g:netrw_browse_split = 2
 " disable buffer reuse to reduce netrw bugs
 let g:netrw_fastbrowse = 0
 
-" make symlink highlighting bearable on tty
-highlight clear netrwSymlink
-highlight link netrwSymlink Special
+function s:HighlightNetrw() abort
+  " make symlink highlighting bearable on tty
+  highlight clear netrwSymlink
+  highlight default link netrwSymlink Special
+endfunction
+
+augroup highlight
+  autocmd!
+  autocmd ColorScheme * call <SID>HighlightNetrw()
+augroup END
 
 " vim: set filetype=vim foldmethod=marker foldlevel=0 nowrap:
