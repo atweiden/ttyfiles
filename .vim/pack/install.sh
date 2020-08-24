@@ -112,6 +112,7 @@ package() {
  package 'Raku/vim-raku' &
  package 'jordwalke/vim-reasonml' &
  package 'cespare/vim-toml' &
+ package 'vim-jp/syntax-vim-ex' &
  wait) &
 (set_dir 'undo' 'opt'
  package 'mbbill/undotree' &
