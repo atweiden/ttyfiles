@@ -135,9 +135,20 @@ function! s:Highlight() abort
   highlight link DiffText GitGutterChange
 endfunction
 
+function! s:HighlightNvim() abort
+  " set :terminal cursor to URxvt-like underline
+  highlight clear TermCursor
+  highlight TermCursor ctermfg=red cterm=underline
+  highlight clear TermCursorNC
+  highlight TermCursorNC ctermfg=red cterm=underline
+endfunction
+
 augroup highlight
   autocmd!
   autocmd ColorScheme * call <SID>Highlight()
+  if has('nvim')
+    autocmd ColorScheme * call <SID>HighlightNvim()
+  endif
 augroup END
 
 " turn off any existing search
@@ -164,11 +175,6 @@ endif
 " neovim {{{
 
 if has('nvim')
-  " set :terminal cursor to URxvt-like underline
-  highlight clear TermCursor
-  highlight TermCursor ctermfg=red cterm=underline
-  highlight clear TermCursorNC
-  highlight TermCursorNC ctermfg=red cterm=underline
   " enable substitution live preview
   set inccommand=nosplit
 endif
