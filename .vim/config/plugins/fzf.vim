@@ -21,7 +21,7 @@ let g:fzf_layout = {
 
 " preview files using highlight
 let g:fzf_files_options = printf('--preview "%s {} | head -' . &lines . '"',
-  \ $VIMPATH . '/pack/search-replace/start/fzf.vim/bin/preview.sh')
+  \ $VIMPATH . '/pack/packager/start/fzf.vim/bin/preview.sh')
 
 " paint pleasant monotone statusline in fzf buffer
 " fixes disappearing statusline in main vim window

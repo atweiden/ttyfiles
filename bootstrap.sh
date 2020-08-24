@@ -125,11 +125,22 @@ rsync "${_rsync_opts[@]}" "$DIR/" "$HOME"
 
 
 # -----------------------------------------------------------------------------
-# vim
+# kristijanhusak/vim-packager
 # -----------------------------------------------------------------------------
 
-# clone plugins for vim 8 package management
-"$HOME/.vim/pack/install.sh"
+_packager_src='https://github.com/kristijanhusak/vim-packager'
+_packager_dst="$HOME/.vim/pack/packager/opt/vim-packager"
+if ! [[ -d "$_packager_dst" ]]; then
+  echo -n 'Installing vim plugins... '
+  git clone \
+    "$_packager_src" \
+    "$_packager_dst"
+  vim \
+    -c 'call PackagerInit()' \
+    -c 'call packager#install({ "on_finish": "quitall" })' > \
+    /dev/null 2>&1
+  echo 'done.'
+fi
 
 
 # -----------------------------------------------------------------------------
