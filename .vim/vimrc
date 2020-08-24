@@ -18,7 +18,11 @@ call s:SourceConfig('shortcuts.vim')
 call s:SourceConfig('plugins.vim')
 call s:SourceConfig('terminal.vim')
 
-filetype plugin indent on
-syntax enable
+if has('autocmd')
+  filetype plugin indent on
+endif
+if has('syntax') && !exists('g:syntax_on')
+  syntax enable
+endif
 
 " vim: set filetype=vim foldmethod=marker foldlevel=0 nowrap:
