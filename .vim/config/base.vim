@@ -137,10 +137,6 @@ set ttyfast
 " make syntax highlighting more robust post vim 8
 set redrawtime=10000
 
-" use histogram diff algorithm, indent heuristic for internal diff library
-set diffopt+=algorithm:histogram
-set diffopt+=indent-heuristic
-
 " format lines with fmt
 set formatprg=fmt
 
