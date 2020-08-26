@@ -15,8 +15,8 @@ function! PkgrSetup() abort
   call packager#add('drmikehenry/vim-fixkey')
 
   " search and replace
-  call packager#add('junegunn/fzf')
-  call packager#add('junegunn/fzf.vim')
+  call packager#add('junegunn/fzf', { 'type': 'opt' })
+  call packager#add('junegunn/fzf.vim', { 'type': 'opt' })
 
   " movement
   call packager#add('rhysd/clever-f.vim')
