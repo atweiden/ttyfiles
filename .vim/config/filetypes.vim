@@ -25,6 +25,9 @@ augroup languages
   " journal
   autocmd BufNewFile,BufRead *.txt packadd vim-journal
 
+  " raku
+  autocmd BufNewFile,BufRead *.raku,*.rakumod,*.rakudoc,*.rakutest,*.pm6,*.p6,*.pl6,*.t6,*.t,*.nqp packadd vim-raku
+
   " txn
   autocmd BufNewFile,BufRead *.txn setlocal filetype=txn
 
