@@ -7,7 +7,6 @@ function! PackagerSetup() abort
   call packager#add('talek/obvious-resize')
 
   " folds
-  call packager#add('Konfekt/FastFold')
   call packager#add('Harenome/vim-neatfoldtext')
 
   " keyboard
