@@ -2,7 +2,14 @@ augroup languages
   autocmd!
 
   " elixir
-  autocmd BufReadPre,FileReadPre *.ex,*.exs,mix.lock,*.eex,*.leex packadd vim-elixir
+  execute printf('autocmd BufReadPre,FileReadPre %s packadd vim-elixir',
+      \ join([
+      \   '*.ex',
+      \   '*.exs',
+      \   'mix.lock',
+      \   '*.eex',
+      \   '*.leex'
+      \ ], ','))
 
   " enc
   autocmd BufNewFile,BufRead *.enc setlocal filetype=enc
@@ -19,8 +26,7 @@ augroup languages
       \ ], ' '))
 
   " fennel
-  execute printf('autocmd BufReadPre,FileReadPre %s packadd vim-fennel',
-      \ g:lispft['fennel'])
+  autocmd BufReadPre,FileReadPre *.fnl packadd vim-fennel
 
   " finn
   autocmd BufReadPre,FileReadPre *.finn packadd vim-finn
@@ -29,17 +35,33 @@ augroup languages
   autocmd QuitPre *.gpg silent! call system('pkill gpg-agent')
 
   " janet
-  execute printf('autocmd BufReadPre,FileReadPre %s packadd janet.vim',
-      \ g:lispft['janet'])
+  autocmd BufReadPre,FileReadPre *.janet packadd janet.vim
 
   " journal
   autocmd BufReadPre,FileReadPre *.txt packadd vim-journal
 
   " raku
-  autocmd BufReadPre,FileReadPre *.raku,*.rakumod,*.rakudoc,*.rakutest,*.pm6,*.p6,*.pl6,*.t6,*.t,*.nqp packadd vim-raku
+  execute printf('autocmd BufReadPre,FileReadPre %s packadd vim-raku',
+      \ join([
+      \   '*.raku',
+      \   '*.rakumod',
+      \   '*.rakudoc',
+      \   '*.rakutest',
+      \   '*.pm6',
+      \   '*.p6',
+      \   '*.pl6',
+      \   '*.t6',
+      \   '*.t',
+      \   '*.nqp'
+      \ ], ','))
 
   " toml
-  autocmd BufReadPre,FileReadPre *.toml,Gopkg.lock,Cargo.lock packadd vim-toml
+  execute printf('autocmd BufReadPre,FileReadPre %s packadd vim-toml',
+      \ join([
+      \   '*.toml',
+      \   'Gopkg.lock',
+      \   'Cargo.lock'
+      \ ], ','))
 
   " txn
   autocmd BufNewFile,BufRead *.txn setlocal filetype=txn
