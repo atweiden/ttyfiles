@@ -18,6 +18,10 @@ augroup languages
   " gpg
   autocmd QuitPre *.gpg silent! call system('pkill gpg-agent')
 
+  " janet
+  execute printf('autocmd BufNewFile,BufRead %s packadd janet.vim',
+      \ g:lispft['janet'])
+
   " txn
   autocmd BufNewFile,BufRead *.txn setlocal filetype=txn
 
