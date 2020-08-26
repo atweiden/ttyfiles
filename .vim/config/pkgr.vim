@@ -51,29 +51,30 @@ function! PkgrSetup() abort
 
   " --- elixir {{{
 
-  call packager#add('elixir-editors/vim-elixir')
+  call packager#add('elixir-editors/vim-elixir', { 'type': 'opt' })
 
   " --- end elixir }}}
   " --- journal {{{
 
-  call packager#add('junegunn/vim-journal')
-  call packager#add('atweiden/vim-finn', { 'branch': 'finn' })
+  call packager#add('junegunn/vim-journal', { 'type': 'opt' })
+  call packager#add('atweiden/vim-finn', { 'branch': 'finn',
+                                         \   'type': 'opt' })
 
   " --- end journal }}}
   " --- lisp {{{
 
-  call packager#add('atweiden/vim-fennel')
-  call packager#add('janet-lang/janet.vim')
+  call packager#add('atweiden/vim-fennel', { 'type': 'opt' })
+  call packager#add('janet-lang/janet.vim', { 'type': 'opt' })
 
   " --- end lisp }}}
   " --- raku {{{
 
-  call packager#add('Raku/vim-raku')
+  call packager#add('Raku/vim-raku', { 'type': 'opt' })
 
   " --- end raku }}}
   " --- toml {{{
 
-  call packager#add('cespare/vim-toml')
+  call packager#add('cespare/vim-toml', { 'type': 'opt' })
 
   " --- end toml }}}
 
