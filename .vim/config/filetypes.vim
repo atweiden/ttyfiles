@@ -22,6 +22,9 @@ augroup languages
   execute printf('autocmd BufNewFile,BufRead %s packadd janet.vim',
       \ g:lispft['janet'])
 
+  " journal
+  autocmd BufNewFile,BufRead *.txt packadd vim-journal
+
   " txn
   autocmd BufNewFile,BufRead *.txn setlocal filetype=txn
 
