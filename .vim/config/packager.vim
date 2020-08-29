@@ -44,7 +44,7 @@ function! PackagerSetup() abort
   call packager#add('atweiden/vim-viewport', { 'type': 'opt' })
 
   " command runners
-  call packager#add('tpope/vim-tbone')
+  call packager#add('tpope/vim-tbone', { 'type': 'opt' })
 
   " languages {{{
 
