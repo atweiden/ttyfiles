@@ -215,6 +215,7 @@ _has_gdb="$(command -v gdb)"
 _has_git="$(command -v git)"
 _has_icdiff="$(command -v icdiff)"
 _has_iex="$(command -v iex)"
+_has_irb="$(command -v irb)"
 _has_irssi="$(command -v irssi)"
 _has_locate="$(command -v locate)"
 _has_lynx="$(command -v lynx)"
@@ -447,6 +448,15 @@ alias rex='repl --language elixir -- --dot-iex $HOME/.config/elixir/iex.exs'
 alias rnl='repl --language fennel'
 
 # --- end repl }}}
+# --- ruby {{{
+
+[[ -n "$_has_irb" ]] \
+  && alias irb='irb \
+    --colorize \
+    --multiline \
+    --readline'
+
+# --- end ruby }}}
 # --- safety {{{
 
 alias cp='cp -i'
@@ -797,6 +807,11 @@ export RLWRAP_HOME="$HOME/.config/rlwrap"
 export RLWRAP_EDITOR="vim '+call cursor(%L,%C)'"
 
 # --- end rlwrap }}}
+# --- ruby {{{
+
+export IRBRC="$HOME/.config/irb/irbrc"
+
+# --- end ruby }}}
 # --- screen {{{
 
 export SCREENRC="$HOME/.config/screen/screenrc"
