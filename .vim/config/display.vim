@@ -133,10 +133,8 @@ function! s:Highlight() abort
   highlight link DiffDelete GitGutterDelete
   highlight clear DiffText
   highlight link DiffText GitGutterChange
-endfunction
 
-function! s:HighlightNvim() abort
-  " set :terminal cursor to URxvt-like underline
+  " terminal cursor
   highlight clear TermCursor
   highlight TermCursor ctermfg=red cterm=underline
   highlight clear TermCursorNC
@@ -146,9 +144,6 @@ endfunction
 augroup highlight
   autocmd!
   autocmd ColorScheme * call <SID>Highlight()
-  if has('nvim')
-    autocmd ColorScheme * call <SID>HighlightNvim()
-  endif
 augroup END
 
 " turn off any existing search
