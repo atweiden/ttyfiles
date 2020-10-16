@@ -58,7 +58,7 @@ augroup languages
   autocmd QuitPre *.gpg silent! call system('pkill gpg-agent')
 
   " hugo
-  autocmd BufNewFile,BufRead **/layouts/{,**/}*.html setlocal filetype=gohtmltmpl
+  autocmd BufNewFile,BufRead **/layouts/**.html setlocal filetype=gohtmltmpl
 
   " janet
   autocmd BufReadPre,FileReadPre *.janet silent doautocmd User LoadJanet
