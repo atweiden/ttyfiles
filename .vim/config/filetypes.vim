@@ -7,8 +7,6 @@ augroup lazylanguages
   autocmd User LoadJanet ++once packadd janet.vim
   autocmd User LoadJournal ++once packadd vim-journal
   autocmd User LoadKiwi ++once packadd vim-kiwi
-  autocmd User LoadConjure ++once packadd conjure
-  autocmd User LoadSexp ++once packadd vim-sexp
   autocmd User LoadRaku ++once packadd vim-raku
   autocmd User LoadRust ++once packadd rust.vim
   autocmd User LoadToml ++once packadd vim-toml
