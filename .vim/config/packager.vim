@@ -64,6 +64,7 @@ function! PackagerSetup() abort
 
   call packager#add('atweiden/vim-fennel', { 'type': 'opt' })
   call packager#add('janet-lang/janet.vim', { 'type': 'opt' })
+  call packager#add('atweiden/vim-kiwi', { 'type': 'opt' })
 
   " --- end lisp }}}
   " --- raku {{{

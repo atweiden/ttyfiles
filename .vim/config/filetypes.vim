@@ -6,6 +6,7 @@ augroup lazylanguages
   autocmd User LoadFinn ++once packadd vim-finn
   autocmd User LoadJanet ++once packadd janet.vim
   autocmd User LoadJournal ++once packadd vim-journal
+  autocmd User LoadKiwi ++once packadd vim-kiwi
   autocmd User LoadConjure ++once packadd conjure
   autocmd User LoadSexp ++once packadd vim-sexp
   autocmd User LoadRaku ++once packadd vim-raku
@@ -34,7 +35,7 @@ augroup languages
   autocmd BufNewFile,BufRead *.enc setlocal filetype=enc
 
   " fennel
-  autocmd BufReadPre,FileReadPre *.fnl silent doautocmd User LoadFennel
+  autocmd BufReadPre,FileReadPre *.fnl,*.kiwi silent doautocmd User LoadFennel
   autocmd FileType fennel silent doautocmd User LoadFennel
 
   " finn
@@ -53,6 +54,10 @@ augroup languages
 
   " journal
   autocmd FileType journal silent doautocmd User LoadJournal
+
+  " kiwi
+  autocmd BufReadPre,FileReadPre *.kiwi silent doautocmd User LoadKiwi
+  autocmd FileType kiwi silent doautocmd User LoadKiwi
 
   " raku
   execute printf('autocmd BufReadPre,FileReadPre %s silent doautocmd User LoadRaku',
