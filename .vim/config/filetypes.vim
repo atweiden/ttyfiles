@@ -23,6 +23,7 @@ augroup languages
       \   '*.exs',
       \   'mix.lock',
       \   '*.eex',
+      \   '*.heex',
       \   '*.leex',
       \   '*.sface'
       \ ], ','))
