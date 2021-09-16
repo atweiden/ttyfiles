@@ -114,6 +114,9 @@ set noautowrite
 set noautowriteall
 set noautoread
 
+" always use unix-style line endings
+set fileformat=unix
+
 " read unix, dos and mac file formats
 set fileformats=unix,dos,mac
 
