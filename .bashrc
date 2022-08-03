@@ -277,8 +277,11 @@ alias ,='clear'
 # --- end bash }}}
 # --- curl {{{
 
-[[ -n "$_has_curl" ]] \
-  && alias curl='curl --config $HOME/.config/curl/curlrc'
+if [[ -n "$_has_curl" ]]; then
+  alias curl='curl --config $HOME/.config/curl/curlrc'
+  # protect against https downgrade attacks
+  alias scurl='curl --tlsv1.2 --proto =https'
+fi
 
 # --- end curl }}}
 # --- dbs {{{
