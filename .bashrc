@@ -627,7 +627,7 @@ if [[ -n "$_has_vim" ]]; then
   # tell vim not to attempt connection with X server
   alias vim='vim -X'
   alias view='vim -R'
-  alias vime='vim -u $HOME/.vim/vimrc.encrypt -x'
+  alias vime='vim -u $HOME/.vim/vimrc.encrypt'
   alias viml='vim -u $HOME/.vim/vimrc.lite'
   alias vimmin='vim \
     -u NONE \
