@@ -98,7 +98,7 @@ function! PackagerSetup() abort
   " colors
   call packager#add('noahfrederick/vim-noctu')
   call packager#add('atweiden/seoul256.vim', { 'branch': 'fix-todo-hi' })
-  call packager#add('ewilazarus/preto')
+  call packager#add('atweiden/preto.vim', { 'branch': 'develop' })
 
   " color utilities
   call packager#add('ntpeters/vim-better-whitespace')
