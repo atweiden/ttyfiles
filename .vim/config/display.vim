@@ -167,14 +167,9 @@ match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
 
 " colorscheme
 set t_Co=16
-if $TERM =~# "256color"
-  let g:seoul256_background = 233
-  let g:seoul256_light_background = 256
-  silent! colorscheme seoul256
-else
-  " fallback for linux-16color
-  silent! colorscheme noctu
-endif
+let g:seoul256_background = 233
+let g:seoul256_light_background = 256
+silent! colorscheme $COLORSCHEME
 
 " end highlighting }}}
 " neovim {{{
