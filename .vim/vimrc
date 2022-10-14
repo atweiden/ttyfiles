@@ -9,6 +9,7 @@ else
   " fallback for linux-16color
   let $COLORSCHEME = 'noctu'
 endif
+let $NVIM = has('nvim')
 
 function! s:SourceConfig(path) abort
   execute 'source' fnameescape($CFGPATH . '/' . a:path)

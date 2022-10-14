@@ -174,7 +174,7 @@ silent! colorscheme $COLORSCHEME
 " end highlighting }}}
 " neovim {{{
 
-if has('nvim')
+if $NVIM
   " enable substitution live preview
   set inccommand=nosplit
 endif

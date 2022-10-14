@@ -34,7 +34,7 @@ function! s:TwfNvim() abort
 endfunction
 
 function! Twf() abort
-  if !has('nvim')
+  if !$NVIM
     call <SID>TwfVim()
   else
     call <SID>TwfNvim()
