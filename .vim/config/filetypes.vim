@@ -76,7 +76,7 @@ augroup languages
   autocmd BufNewFile,BufRead **/layouts/**.html setlocal filetype=gohtmltmpl
 
   " janet
-  autocmd BufReadPre,FileReadPre *.janet silent doautocmd User LoadJanet
+  autocmd BufReadPre,FileReadPre *.janet,*.jdn silent doautocmd User LoadJanet
   autocmd FileType janet silent doautocmd User LoadJanet
 
   " journal
