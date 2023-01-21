@@ -12,7 +12,7 @@ def PackagerSetup(): void
   packager#add('talek/obvious-resize')
 
   # folds
-  packager#add('Harenome/vim-neatfoldtext')
+  packager#add('atweiden/vim-neatfoldtext')
 
   # keyboard
   packager#add('kana/vim-arpeggio', { 'type': 'opt' })
