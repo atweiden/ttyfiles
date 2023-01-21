@@ -1,4 +1,4 @@
-function! s:TwfVim() abort
+function! s:Twf() abort
   let temp = tempname()
   execute 'silent ! twf ' . @% . ' > ' . temp
   redraw!
@@ -9,35 +9,6 @@ function! s:TwfVim() abort
   endtry
   if !empty(out)
     execute 'edit! ' . out[0]
-  endif
-endfunction
-
-function! s:TwfNvimExit(path) abort
-  function! TwfNvimExitClosure(job_id, data, event) abort closure
-    bdelete!
-    try
-      let out = filereadable(a:path) ? readfile(a:path) : []
-    finally
-      silent! call delete(a:path)
-    endtry
-    if !empty(out)
-      execute 'edit! ' . out[0]
-    endif
-  endfunction
-  return funcref('TwfNvimExitClosure')
-endfunction
-
-function! s:TwfNvim() abort
-  let temp = tempname()
-  call termopen('twf ' . @% . ' > ' . temp, { 'on_exit': <SID>TwfNvimExit(temp) })
-  startinsert
-endfunction
-
-function! Twf() abort
-  if !$NVIM
-    call <SID>TwfVim()
-  else
-    call <SID>TwfNvim()
   endif
 endfunction
 

@@ -112,9 +112,6 @@ function! s:Highlight() abort
   " vim uses hl-SpecialKey for nbsp, space, tab and trail
   highlight clear SpecialKey
   highlight default link SpecialKey NonText
-  " neovim uses hl-WhiteSpace for nbsp, space, tab and trail
-  highlight clear WhiteSpace
-  highlight default link Whitespace NonText
 
   " spelling
   highlight clear SpellBad
@@ -172,14 +169,6 @@ let g:seoul256_light_background = 256
 silent! colorscheme $COLORSCHEME
 
 " end highlighting }}}
-" neovim {{{
-
-if $NVIM
-  " enable substitution live preview
-  set inccommand=nosplit
-endif
-
-" end neovim }}}
 " listchars {{{
 
 set list
