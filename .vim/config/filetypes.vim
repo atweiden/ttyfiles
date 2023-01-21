@@ -1,4 +1,6 @@
-" facilitate lazy loading
+vim9script
+
+# facilitate lazy loading
 augroup lazylanguages
   autocmd!
   autocmd User LoadElixir ++once packadd vim-elixir
@@ -19,55 +21,55 @@ augroup END
 augroup languages
   autocmd!
 
-  " elixir
+  # elixir
   execute printf('autocmd BufReadPre,FileReadPre %s silent doautocmd User LoadElixir',
-      \ join([
-      \   '*.ex',
-      \   '*.exs',
-      \   'mix.lock',
-      \   '*.eex',
-      \   '*.heex',
-      \   '*.leex',
-      \   '*.sface',
-      \   '*.lexs'
-      \ ], ','))
+      join([
+        '*.ex',
+        '*.exs',
+        'mix.lock',
+        '*.eex',
+        '*.heex',
+        '*.leex',
+        '*.sface',
+        '*.lexs'
+      ], ','))
   autocmd FileType elixir silent doautocmd User LoadElixir
   autocmd FileType eelixir silent doautocmd User LoadElixir
 
-  " enc
+  # enc
   autocmd BufNewFile,BufRead *.enc setlocal filetype=enc
 
-  " fennel
+  # fennel
   autocmd BufReadPre,FileReadPre *.fnl,*.kiwi silent doautocmd User LoadFennel
   autocmd FileType fennel silent doautocmd User LoadFennel
 
-  " finn
+  # finn
   autocmd BufReadPre,FileReadPre *.finn silent doautocmd User LoadFinn
   autocmd FileType finn silent doautocmd User LoadFinn
 
-  " fsharp
+  # fsharp
   execute printf('autocmd BufReadPre,FileReadPre %s silent doautocmd User LoadFsharp',
-      \ join([
-      \   '*.fs',
-      \   '*.fsx',
-      \   '*.fsi'
-      \ ], ','))
+      join([
+        '*.fs',
+        '*.fsx',
+        '*.fsi'
+      ], ','))
   autocmd FileType fsharp silent doautocmd User LoadFsharp
 
-  " git
-  autocmd BufReadPre,FileReadPre COMMIT_EDITMSG let b:noreturntopos = 1
+  # git
+  autocmd BufReadPre,FileReadPre COMMIT_EDITMSG b:noreturntopos = 1
 
-  " go
+  # go
   execute printf('autocmd BufReadPre,FileReadPre %s silent doautocmd User LoadGo',
-      \ join([
-      \   '*.go',
-      \   '*.s',
-      \   '*.tmpl',
-      \   'go.mod',
-      \   'go.sum',
-      \   'go.work.sum',
-      \   'go.work'
-      \ ], ','))
+      join([
+        '*.go',
+        '*.s',
+        '*.tmpl',
+        'go.mod',
+        'go.sum',
+        'go.work.sum',
+        'go.work'
+      ], ','))
   autocmd FileType asm silent doautocmd User LoadGo
   autocmd FileType go silent doautocmd User LoadGo
   autocmd FileType gohtmltmpl silent doautocmd User LoadGo
@@ -75,67 +77,67 @@ augroup languages
   autocmd FileType gosum silent doautocmd User LoadGo
   autocmd FileType gowork silent doautocmd User LoadGo
 
-  " gpg
-  autocmd QuitPre *.gpg silent! call system('pkill gpg-agent')
+  # gpg
+  autocmd QuitPre *.gpg silent! system('pkill gpg-agent')
 
-  " hare
+  # hare
   autocmd BufReadPre,FileReadPre *.ha silent doautocmd User LoadHare
   autocmd FileType hare silent doautocmd User LoadHare
 
-  " hugo
+  # hugo
   autocmd BufNewFile,BufRead **/layouts/**.html setlocal filetype=gohtmltmpl
 
-  " janet
+  # janet
   autocmd BufReadPre,FileReadPre *.janet,*.jdn silent doautocmd User LoadJanet
   autocmd FileType janet silent doautocmd User LoadJanet
 
-  " journal
+  # journal
   autocmd FileType journal silent doautocmd User LoadJournal
 
-  " kiwi
+  # kiwi
   autocmd BufReadPre,FileReadPre *.kiwi silent doautocmd User LoadKiwi
   autocmd FileType kiwi silent doautocmd User LoadKiwi
 
-  " raku
+  # raku
   execute printf('autocmd BufReadPre,FileReadPre %s silent doautocmd User LoadRaku',
-      \ join([
-      \   '*.raku',
-      \   '*.rakumod',
-      \   '*.rakudoc',
-      \   '*.rakutest',
-      \   '*.pm6',
-      \   '*.p6',
-      \   '*.pl6',
-      \   '*.t6',
-      \   '*.t',
-      \   '*.nqp'
-      \ ], ','))
+      join([
+        '*.raku',
+        '*.rakumod',
+        '*.rakudoc',
+        '*.rakutest',
+        '*.pm6',
+        '*.p6',
+        '*.pl6',
+        '*.t6',
+        '*.t',
+        '*.nqp'
+      ], ','))
   autocmd FileType raku silent doautocmd User LoadRaku
 
-  " rust
+  # rust
   autocmd BufReadPre,FileReadPre *.rs silent doautocmd User LoadRust
   autocmd FileType rust silent doautocmd User LoadRust
 
-  " toml
+  # toml
   execute printf('autocmd BufReadPre,FileReadPre %s silent doautocmd User LoadToml',
-      \ join([
-      \   '*.toml',
-      \   'pdm.lock',
-      \   'Gopkg.lock',
-      \   'Cargo.lock'
-      \ ], ','))
+      join([
+        '*.toml',
+        'pdm.lock',
+        'Gopkg.lock',
+        'Cargo.lock'
+      ], ','))
   autocmd FileType toml silent doautocmd User LoadToml
 
-  " txn
+  # txn
   autocmd BufNewFile,BufRead *.txn setlocal filetype=txn
 
-  " xbps
-  autocmd BufReadCmd *.xbps call tar#Browse(expand("<amatch>"))
+  # xbps
+  autocmd BufReadCmd *.xbps tar#Browse(expand("<amatch>"))
 
-  " zig
+  # zig
   autocmd BufReadPre,FileReadPre *.zig,*.zir silent doautocmd User LoadZig
   autocmd FileType zig silent doautocmd User LoadZig
   autocmd FileType zir silent doautocmd User LoadZig
 augroup END
 
-" vim: set filetype=vim foldmethod=marker foldlevel=0 nowrap:
+# vim: set filetype=vim foldmethod=marker foldlevel=0 nowrap:

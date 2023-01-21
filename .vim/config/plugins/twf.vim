@@ -1,28 +1,33 @@
-function! s:Twf() abort
-  let temp = tempname()
-  execute 'silent ! twf ' . @% . ' > ' . temp
+vim9script
+
+def Twf(): void
+  var temp = tempname()
+  execute 'silent ! twf ' .. @% .. ' > ' .. temp
   redraw!
+  var out = []
   try
-    let out = filereadable(temp) ? readfile(temp) : []
+    if filereadable(temp)
+      out = readfile(temp)
+    endif
   finally
-    silent! call delete(temp)
+    silent! delete(temp)
   endtry
   if !empty(out)
-    execute 'edit! ' . out[0]
+    execute 'edit! ' .. out[0]
   endif
-endfunction
+enddef
 
-command! Twf call Twf()
+command! Twf Twf()
 
-function! s:TwfChooser(dirname) abort
-  if isdirectory(a:dirname)
-    call Twf()
+def TwfChooser(dirname: string): void
+  if isdirectory(dirname)
+    Twf()
   endif
-endfunction
+enddef
 
 augroup twf
   autocmd!
-  autocmd BufEnter * silent call <SID>TwfChooser(expand("<amatch>"))
+  autocmd BufEnter * silent TwfChooser(expand("<amatch>"))
 augroup END
 
-" vim: set filetype=vim foldmethod=marker foldlevel=0 nowrap:
+# vim: set filetype=vim foldmethod=marker foldlevel=0 nowrap:
