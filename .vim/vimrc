@@ -10,6 +10,7 @@ if $TERM =~# "256color"
   $COLORSCHEME = 'seoul256'
 else
   # fallback for linux-16color
+  set t_Co=16
   $COLORSCHEME = 'noctu'
 endif
 
