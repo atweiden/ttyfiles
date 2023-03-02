@@ -829,6 +829,14 @@ fi
 export INTERFACE="$(interface)"
 
 # --- end ip }}}
+# --- ocaml {{{
+
+# configure opam
+test -r "$HOME/.opam/opam-init/init.sh" \
+  && . "$HOME/.opam/opam-init/init.sh" > /dev/null 2> /dev/null \
+  || true
+
+# --- end ocaml }}}
 # --- opener {{{
 
 export OPENER='vim'
