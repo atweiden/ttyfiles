@@ -235,7 +235,6 @@ _has_git="$(command -v git)"
 _has_icdiff="$(command -v icdiff)"
 _has_iex="$(command -v iex)"
 _has_irb="$(command -v irb)"
-_has_irssi="$(command -v irssi)"
 _has_locate="$(command -v locate)"
 _has_lynx="$(command -v lynx)"
 _has_makepkg="$(command -v makepkg)"
@@ -448,14 +447,6 @@ fi
 alias info='info --vi-keys'
 
 # --- end info }}}
-# --- irssi {{{
-
-[[ -n "$_has_irssi" ]] \
-  && alias irssi='irssi \
-    --config=$HOME/.config/irssi/config \
-    --home=$HOME/.config/irssi'
-
-# --- end irssi }}}
 # --- lynx {{{
 
 [[ -n "$_has_lynx" ]] \
