@@ -11,6 +11,7 @@ augroup lazylanguages
   autocmd User LoadHare ++once packadd hare.vim
   autocmd User LoadJanet ++once packadd janet.vim
   autocmd User LoadJournal ++once packadd vim-journal
+  autocmd User LoadJust ++once packadd vim-just
   autocmd User LoadKiwi ++once packadd vim-kiwi
   autocmd User LoadRaku ++once packadd vim-raku
   autocmd User LoadRust ++once packadd rust.vim
@@ -93,6 +94,15 @@ augroup languages
 
   # journal
   autocmd FileType journal silent doautocmd User LoadJournal
+
+  # just
+  execute printf('autocmd BufReadPre,FileReadPre %s silent doautocmd User LoadJust',
+      join([
+        '\cjustfile',
+        '.justfile',
+        '*.just'
+      ], ','))
+  autocmd FileType just silent doautocmd User LoadJust
 
   # kiwi
   autocmd BufReadPre,FileReadPre *.kiwi silent doautocmd User LoadKiwi

@@ -80,6 +80,11 @@ def PackagerSetup(): void
                                         'type': 'opt' })
 
   # --- end journal }}}
+  # --- just {{{
+
+  packager#add('NoahTheDuke/vim-just', { 'type': 'opt' })
+
+  # --- end just }}}
   # --- lisp {{{
 
   packager#add('atweiden/vim-fennel', { 'type': 'opt' })
